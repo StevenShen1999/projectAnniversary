@@ -7,7 +7,6 @@ const emit = defineEmits(['solved'])
 
 const answer = ref('')
 const error = ref(false)
-const showHint = ref(false)
 
 const submit = () => {
   if (checkAnswer(2, answer.value)) {
@@ -22,9 +21,7 @@ const submit = () => {
 <template>
   <div class="space-y-6">
     <div class="text-center text-rose-700/80 text-lg">
-      <!-- Puzzle 3 content/question goes here -->
-      <p>Puzzle 3 - Our Song...</p>
-      <p class="text-sm mt-2 italic">(Puzzle content TBD - currently accepts any answer)</p>
+      <p>{{ puzzle.question }}</p>
     </div>
 
     <div class="max-w-md mx-auto">
@@ -46,19 +43,6 @@ const submit = () => {
       >
         Submit Answer
       </button>
-
-      <button
-        @click="showHint = !showHint"
-        class="w-full mt-3 text-rose-500 hover:text-rose-600 text-sm"
-      >
-        {{ showHint ? 'Hide hint' : 'Need a hint?' }}
-      </button>
-
-      <transition name="fade">
-        <p v-if="showHint" class="mt-3 text-center text-rose-600/70 italic">
-          💡 {{ puzzle.hint }}
-        </p>
-      </transition>
     </div>
   </div>
 </template>

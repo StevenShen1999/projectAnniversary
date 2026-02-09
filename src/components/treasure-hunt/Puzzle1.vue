@@ -5,12 +5,25 @@ import { checkAnswer } from '../../data/puzzles'
 const props = defineProps(['puzzle'])
 const emit = defineEmits(['solved'])
 
-const answer = ref('')
+const selectedColour = ref(null)
 const error = ref(false)
-const showHint = ref(false)
+
+const colourMap = {
+  Red: '#ef4444',
+  Blue: '#3b82f6',
+  Green: '#22c55e',
+  Yellow: '#eab308',
+  Purple: '#a855f7',
+  Pink: '#ec4899',
+  Orange: '#f97316'
+}
+
+const selectColour = (colour) => {
+  selectedColour.value = colour
+}
 
 const submit = () => {
-  if (checkAnswer(0, answer.value)) {
+  if (checkAnswer(0, selectedColour.value)) {
     emit('solved')
   } else {
     error.value = true
@@ -22,43 +35,38 @@ const submit = () => {
 <template>
   <div class="space-y-6">
     <div class="text-center text-rose-700/80 text-lg">
-      <!-- Puzzle 1 content/question goes here -->
-      <p>Enter the answer to unlock the next puzzle...</p>
-      <p class="text-sm mt-2 italic">(Puzzle content TBD - currently accepts any answer)</p>
+      <p>{{ puzzle.question }}</p>
     </div>
 
     <div class="max-w-md mx-auto">
-      <input
-        v-model="answer"
-        type="text"
-        placeholder="Your answer..."
-        class="w-full px-6 py-4 text-lg rounded-xl border-2 transition-all duration-300 outline-none"
-        :class="{
-          'border-rose-300 focus:border-rose-500': !error,
-          'border-red-500 bg-red-50 animate-shake': error
-        }"
-        @keyup.enter="submit"
-      />
+      <div class="grid grid-cols-4 gap-4 mb-6">
+        <button
+          v-for="colour in puzzle.colours"
+          :key="colour"
+          @click="selectColour(colour)"
+          class="flex flex-col items-center gap-2 p-3 rounded-xl border-2 transition-all duration-300"
+          :class="{
+            'border-transparent hover:border-rose-200': selectedColour !== colour,
+            'border-rose-600 shadow-lg scale-105': selectedColour === colour && !error,
+            'border-red-500 animate-shake': error && selectedColour === colour
+          }"
+        >
+          <div
+            class="w-14 h-14 rounded-full shadow-md transition-transform hover:scale-110"
+            :style="{ backgroundColor: colourMap[colour] }"
+          ></div>
+          <span class="text-sm text-rose-700 font-medium">{{ colour }}</span>
+        </button>
+      </div>
 
       <button
         @click="submit"
-        class="btn-primary w-full mt-4"
+        :disabled="!selectedColour"
+        class="btn-primary w-full"
+        :class="{ 'opacity-50 cursor-not-allowed': !selectedColour }"
       >
         Submit Answer
       </button>
-
-      <button
-        @click="showHint = !showHint"
-        class="w-full mt-3 text-rose-500 hover:text-rose-600 text-sm"
-      >
-        {{ showHint ? 'Hide hint' : 'Need a hint?' }}
-      </button>
-
-      <transition name="fade">
-        <p v-if="showHint" class="mt-3 text-center text-rose-600/70 italic">
-          💡 {{ puzzle.hint }}
-        </p>
-      </transition>
     </div>
   </div>
 </template>

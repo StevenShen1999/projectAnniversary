@@ -1,27 +1,26 @@
 <script setup>
 import { ref } from 'vue'
+import { checkAnswer } from '../../data/puzzles'
 
 const props = defineProps(['puzzle'])
 const emit = defineEmits(['solved'])
 
-const options = ref([
-  { id: 'a', text: 'Option A - TBD', correct: false },
-  { id: 'b', text: 'Option B - TBD', correct: true },
-  { id: 'c', text: 'Option C - TBD', correct: false },
-  { id: 'd', text: 'Option D - TBD', correct: false }
-])
-
-const selectedOption = ref(null)
+const selected = ref([])
 const error = ref(false)
-const showHint = ref(false)
 
-const selectOption = (option) => {
-  selectedOption.value = option.id
+const toggleOption = (option) => {
+  const idx = selected.value.indexOf(option)
+  if (idx === -1) {
+    selected.value.push(option)
+  } else {
+    selected.value.splice(idx, 1)
+  }
 }
 
+const isSelected = (option) => selected.value.includes(option)
+
 const submit = () => {
-  const selected = options.value.find(o => o.id === selectedOption.value)
-  if (selected && selected.correct) {
+  if (checkAnswer(5, selected.value)) {
     emit('solved')
   } else {
     error.value = true
@@ -33,47 +32,42 @@ const submit = () => {
 <template>
   <div class="space-y-6">
     <div class="text-center text-rose-700/80 text-lg">
-      <p>The Final Puzzle - Choose wisely...</p>
-      <p class="text-sm mt-2 italic">(Multiple choice options TBD)</p>
+      <p>{{ puzzle.question }}</p>
+      <p class="text-sm mt-2 text-rose-500/70 italic">Select all that apply</p>
     </div>
 
     <div class="max-w-md mx-auto space-y-3">
       <button
-        v-for="option in options"
-        :key="option.id"
-        @click="selectOption(option)"
-        class="w-full p-4 rounded-xl border-2 text-left transition-all duration-300"
+        v-for="option in puzzle.options"
+        :key="option"
+        @click="toggleOption(option)"
+        class="w-full p-4 rounded-xl border-2 text-left transition-all duration-300 flex items-center gap-3"
         :class="{
-          'border-rose-300 bg-white hover:border-rose-400': selectedOption !== option.id && !error,
-          'border-rose-600 bg-rose-50 shadow-lg': selectedOption === option.id && !error,
-          'border-red-500 bg-red-50 animate-shake': error && selectedOption === option.id
+          'border-rose-300 bg-white hover:border-rose-400': !isSelected(option) && !error,
+          'border-rose-600 bg-rose-50 shadow-lg': isSelected(option) && !error,
+          'border-red-500 bg-red-50 animate-shake': error && isSelected(option)
         }"
       >
-        <span class="font-bold text-rose-600 mr-3">{{ option.id.toUpperCase() }}.</span>
-        <span class="text-rose-700">{{ option.text }}</span>
+        <div
+          class="w-6 h-6 rounded border-2 flex items-center justify-center transition-all flex-shrink-0"
+          :class="{
+            'border-rose-300': !isSelected(option),
+            'border-rose-600 bg-rose-600': isSelected(option)
+          }"
+        >
+          <span v-if="isSelected(option)" class="text-white text-sm">✓</span>
+        </div>
+        <span class="text-rose-700 font-medium">{{ option }}</span>
       </button>
 
       <button
         @click="submit"
-        :disabled="!selectedOption"
+        :disabled="selected.length === 0"
         class="btn-primary w-full mt-4"
-        :class="{ 'opacity-50 cursor-not-allowed': !selectedOption }"
+        :class="{ 'opacity-50 cursor-not-allowed': selected.length === 0 }"
       >
-        Submit Final Answer
+        Submit Answer
       </button>
-
-      <button
-        @click="showHint = !showHint"
-        class="w-full mt-3 text-rose-500 hover:text-rose-600 text-sm"
-      >
-        {{ showHint ? 'Hide hint' : 'Need a hint?' }}
-      </button>
-
-      <transition name="fade">
-        <p v-if="showHint" class="mt-3 text-center text-rose-600/70 italic">
-          💡 {{ puzzle.hint }}
-        </p>
-      </transition>
     </div>
   </div>
 </template>
