@@ -4,9 +4,9 @@ import { wrappedContent } from '../../data/wrapped-content'
 
 const stats = wrappedContent.messagingStats
 const animatedValue = ref(0)
+const perspective = ref('his') // 'his' = AEDT (UTC+11), 'hers' = Saint Petersburg (UTC+3)
 
 onMounted(() => {
-  // Animate the message count
   const target = stats.totalMessages || 10000
   const duration = 2000
   const start = Date.now()
@@ -14,7 +14,6 @@ onMounted(() => {
   const animate = () => {
     const elapsed = Date.now() - start
     const progress = Math.min(elapsed / duration, 1)
-    // Easing function for smooth animation
     const eased = 1 - Math.pow(1 - progress, 3)
     animatedValue.value = Math.floor(target * eased)
 
@@ -26,17 +25,14 @@ onMounted(() => {
   animate()
 })
 
-// Generate sample heatmap data if not provided
-const heatmapData = computed(() => {
+const baseHeatmapData = computed(() => {
   if (stats.heatmapData && stats.heatmapData.length > 0) {
     return stats.heatmapData
   }
 
-  // Generate sample data for visualization
   const data = []
   for (let day = 0; day < 7; day++) {
     for (let hour = 0; hour < 24; hour++) {
-      // More activity in evening hours
       let intensity = Math.random()
       if (hour >= 18 && hour <= 23) intensity *= 2
       if (hour >= 0 && hour <= 6) intensity *= 0.3
@@ -44,6 +40,60 @@ const heatmapData = computed(() => {
     }
   }
   return data
+})
+
+// Shift heatmap data by hour offset, handling day wraparound
+function shiftHeatmap(data, hourOffset) {
+  const shifted = []
+  const buckets = {}
+
+  for (const entry of data) {
+    let newHour = entry.hour + hourOffset
+    let newDay = entry.day
+
+    if (newHour < 0) {
+      newHour += 24
+      newDay = (newDay - 1 + 7) % 7
+    } else if (newHour >= 24) {
+      newHour -= 24
+      newDay = (newDay + 1) % 7
+    }
+
+    const key = `${newDay}-${newHour}`
+    if (!buckets[key]) {
+      buckets[key] = { day: newDay, hour: newHour, count: 0 }
+    }
+    buckets[key].count += entry.count
+  }
+
+  return Object.values(buckets)
+}
+
+const heatmapData = computed(() => {
+  if (perspective.value === 'hers') {
+    // AEDT (UTC+11) to Saint Petersburg (UTC+3) = -8 hours
+    return shiftHeatmap(baseHeatmapData.value, -8)
+  }
+  return baseHeatmapData.value
+})
+
+const peakHourLabel = computed(() => {
+  // Find actual peak hour from current heatmap data
+  const hourTotals = {}
+  for (const entry of heatmapData.value) {
+    hourTotals[entry.hour] = (hourTotals[entry.hour] || 0) + entry.count
+  }
+  let peakHour = 0
+  let maxCount = 0
+  for (const [hour, count] of Object.entries(hourTotals)) {
+    if (count > maxCount) {
+      maxCount = count
+      peakHour = parseInt(hour)
+    }
+  }
+  const period = peakHour >= 12 ? 'PM' : 'AM'
+  const displayHour = peakHour === 0 ? 12 : peakHour > 12 ? peakHour - 12 : peakHour
+  return `${displayHour} ${period}`
 })
 
 const getHeatmapColor = (count) => {
@@ -55,6 +105,24 @@ const getHeatmapColor = (count) => {
 
 const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
 const hours = Array.from({ length: 24 }, (_, i) => i)
+
+const tooltip = ref({ show: false, x: 0, y: 0, text: '' })
+
+const showTooltip = (event, dayIndex, hour) => {
+  const count = heatmapData.value.find(d => d.day === dayIndex && d.hour === hour)?.count || 0
+  const period = hour >= 12 ? 'PM' : 'AM'
+  const displayHr = hour === 0 ? 12 : hour > 12 ? hour - 12 : hour
+  tooltip.value = {
+    show: true,
+    x: event.clientX,
+    y: event.clientY,
+    text: `${days[dayIndex]} ${displayHr}${period} — ${count} msgs`
+  }
+}
+
+const hideTooltip = () => {
+  tooltip.value.show = false
+}
 </script>
 
 <template>
@@ -77,6 +145,32 @@ const hours = Array.from({ length: 24 }, (_, i) => i)
 
     <!-- Heatmap -->
     <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-4 md:p-6 overflow-x-auto">
+      <!-- Timezone toggle -->
+      <div class="flex justify-center mb-4">
+        <div class="bg-white/10 rounded-full p-1 flex gap-1">
+          <button
+            @click="perspective = 'his'"
+            class="px-4 py-1.5 rounded-full text-sm font-medium transition-all duration-300"
+            :class="{
+              'bg-white text-rose-600': perspective === 'his',
+              'text-white/70 hover:text-white': perspective !== 'his'
+            }"
+          >
+            His time (AEDT)
+          </button>
+          <button
+            @click="perspective = 'hers'"
+            class="px-4 py-1.5 rounded-full text-sm font-medium transition-all duration-300"
+            :class="{
+              'bg-white text-rose-600': perspective === 'hers',
+              'text-white/70 hover:text-white': perspective !== 'hers'
+            }"
+          >
+            Her time (MSK)
+          </button>
+        </div>
+      </div>
+
       <div class="min-w-[500px]">
         <!-- Hours header -->
         <div class="flex mb-2 pl-12">
@@ -104,7 +198,8 @@ const hours = Array.from({ length: 24 }, (_, i) => i)
                     heatmapData.find(d => d.day === dayIndex && d.hour === hour)?.count || 0
                   )
                 }"
-                :title="`${day} ${hour}:00 - ${heatmapData.find(d => d.day === dayIndex && d.hour === hour)?.count || 0} messages`"
+                @mouseenter="showTooltip($event, dayIndex, hour)"
+                @mouseleave="hideTooltip"
               ></div>
             </div>
           </div>
@@ -112,10 +207,24 @@ const hours = Array.from({ length: 24 }, (_, i) => i)
       </div>
     </div>
 
+    <!-- Tooltip -->
+    <Teleport to="body">
+      <div
+        v-if="tooltip.show"
+        class="fixed z-50 px-3 py-1.5 bg-gray-900 text-white text-sm rounded-lg shadow-lg pointer-events-none whitespace-nowrap"
+        :style="{ left: tooltip.x + 12 + 'px', top: tooltip.y - 36 + 'px' }"
+      >
+        {{ tooltip.text }}
+      </div>
+    </Teleport>
+
     <!-- Peak time callout -->
     <div class="mt-8 text-center">
       <p class="text-white/60">Peak messaging time</p>
-      <p class="text-2xl font-bold">{{ stats.peakHour || '9 PM' }}</p>
+      <p class="text-2xl font-bold">{{ peakHourLabel }}</p>
+      <p class="text-sm text-white/40 mt-1">
+        {{ perspective === 'his' ? 'Sydney time' : 'Saint Petersburg time' }}
+      </p>
     </div>
   </div>
 </template>

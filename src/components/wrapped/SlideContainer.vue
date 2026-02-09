@@ -6,6 +6,7 @@ import MessageRecap from './MessageRecap.vue'
 import FirstImages from './FirstImages.vue'
 import MessagingStats from './MessagingStats.vue'
 import StatisticsSlide from './StatisticsSlide.vue'
+import WordEmojiSlide from './WordEmojiSlide.vue'
 import EnvelopeFinale from './EnvelopeFinale.vue'
 
 const store = useGameStore()
@@ -16,6 +17,7 @@ const slides = [
   { component: FirstImages, name: 'images' },
   { component: MessagingStats, name: 'stats' },
   { component: StatisticsSlide, name: 'statistics' },
+  { component: WordEmojiSlide, name: 'words-emojis' },
   { component: EnvelopeFinale, name: 'finale' }
 ]
 
