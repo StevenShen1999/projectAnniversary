@@ -3,7 +3,7 @@
 export const puzzles = [
   {
     id: 1,
-    title: "Puzzle 1",
+    title: "True Colours",
     subtitle: "Her Favourite Colour",
     question: "What is her favourite colour and one of my favourite features of her?",
     type: "colour-select",
@@ -12,7 +12,7 @@ export const puzzles = [
   },
   {
     id: 2,
-    title: "Puzzle 2",
+    title: "The Secret Code",
     subtitle: "A Secret Only She Knows",
     question: "This is something that only she would know. Disguise is always a self portrait.",
     type: "three-part-input",
@@ -20,7 +20,7 @@ export const puzzles = [
   },
   {
     id: 3,
-    title: "Puzzle 3",
+    title: "Sweet Nothings",
     subtitle: "A Special Name",
     question: "What is the nickname she always calls me with?",
     type: "text-input",
@@ -28,7 +28,7 @@ export const puzzles = [
   },
   {
     id: 4,
-    title: "Puzzle 4",
+    title: "Lazy Sundays",
     subtitle: "Weekend Adventures",
     question: "On our weekends, what is our favourite past time?",
     type: "word-scramble",
@@ -36,7 +36,7 @@ export const puzzles = [
   },
   {
     id: 5,
-    title: "Puzzle 5",
+    title: "Homeland",
     subtitle: "Where She's From",
     question: 'Many may confuse her as a Russian, but she is in fact from Belarus, a city called',
     type: "text-input",
@@ -45,7 +45,7 @@ export const puzzles = [
   },
   {
     id: 6,
-    title: "Puzzle 6",
+    title: "Why I Adore Her",
     subtitle: "Her Virtues",
     question: "What are her virtues which I deeply admire?",
     type: "multi-select",
@@ -54,7 +54,7 @@ export const puzzles = [
   },
   {
     id: 7,
-    title: "Puzzle 7",
+    title: "No Excuses",
     subtitle: "Daily Ritual",
     question: "What is her absolute must daily routine?",
     type: "emoji-select",
