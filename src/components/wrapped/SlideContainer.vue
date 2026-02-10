@@ -113,7 +113,7 @@ onUnmounted(() => {
     </div>
 
     <!-- Slide content -->
-    <div class="flex-1 flex items-center justify-center p-4 md:p-8">
+    <div class="flex-1 flex items-center justify-center px-4 pt-14 pb-20 md:px-8 md:pt-16 md:pb-20 overflow-y-auto">
       <transition
         :name="direction === 'forward' ? 'slide-forward' : 'slide-backward'"
         mode="out-in"
@@ -123,11 +123,11 @@ onUnmounted(() => {
     </div>
 
     <!-- Navigation buttons -->
-    <div class="fixed bottom-8 left-0 right-0 flex justify-center gap-4 z-50">
+    <div class="fixed bottom-6 left-0 right-0 flex justify-center gap-4 z-50">
       <button
         v-if="canGoPrev"
         @click="prevSlide"
-        class="p-3 bg-white/20 hover:bg-white/30 rounded-full text-white transition-all backdrop-blur-sm"
+        class="p-3 bg-black/40 hover:bg-black/60 rounded-full text-white transition-all backdrop-blur-md shadow-lg"
       >
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
@@ -137,7 +137,7 @@ onUnmounted(() => {
       <button
         v-if="canGoNext"
         @click="nextSlide"
-        class="p-3 bg-white/20 hover:bg-white/30 rounded-full text-white transition-all backdrop-blur-sm"
+        class="p-3 bg-black/40 hover:bg-black/60 rounded-full text-white transition-all backdrop-blur-md shadow-lg"
       >
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />

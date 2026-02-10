@@ -31,9 +31,9 @@ onMounted(() => {
           <p class="text-xl md:text-2xl italic mb-4">
             "{{ quote.text }}"
           </p>
-          <div class="flex justify-between text-white/60 text-sm">
-            <span>{{ quote.context }}</span>
-            <span>{{ quote.date }}</span>
+          <p class="text-white/60 text-sm">{{ quote.context }}</p>
+          <div class="border-t border-white/10 mt-3 pt-2 text-right">
+            <span class="text-white/40 text-xs">{{ quote.date }}</span>
           </div>
         </div>
       </transition-group>

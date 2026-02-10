@@ -3,8 +3,7 @@ import { ref } from 'vue'
 import { wrappedContent } from '../../data/wrapped-content'
 
 const isOpen = ref(false)
-const showResponse = ref(false)
-const answered = ref(false)
+const response = ref(null) // null, 'yes', 'maybe'
 
 const openEnvelope = () => {
   if (!isOpen.value) {
@@ -13,8 +12,11 @@ const openEnvelope = () => {
 }
 
 const sayYes = () => {
-  answered.value = true
-  showResponse.value = true
+  response.value = 'yes'
+}
+
+const sayMaybe = () => {
+  response.value = 'maybe'
 }
 </script>
 
@@ -22,7 +24,7 @@ const sayYes = () => {
   <div class="text-white max-w-2xl mx-auto px-4 text-center">
     <transition name="fade" mode="out-in">
       <!-- Initial envelope state -->
-      <div v-if="!showResponse" key="envelope">
+      <div v-if="!response" key="envelope">
         <h2 class="text-3xl md:text-4xl font-bold mb-12">
           One Last Thing...
         </h2>
@@ -67,7 +69,7 @@ const sayYes = () => {
                 {{ wrappedContent.finale.question }}
               </p>
 
-              <div class="flex justify-center gap-4 mt-6">
+              <div class="flex flex-col items-center gap-3 mt-6">
                 <button
                   @click="sayYes"
                   class="px-8 py-3 bg-rose-500 text-white rounded-full font-bold
@@ -75,6 +77,14 @@ const sayYes = () => {
                          shadow-lg hover:shadow-xl"
                 >
                   Yes! 💕
+                </button>
+                <button
+                  @click="sayMaybe"
+                  class="px-6 py-2 bg-rose-200 text-rose-600 rounded-full text-sm font-medium
+                         hover:bg-rose-300 transition-all transform hover:scale-105
+                         shadow hover:shadow-md"
+                >
+                  Let me think about it...
                 </button>
               </div>
 
@@ -90,8 +100,8 @@ const sayYes = () => {
         </p>
       </div>
 
-      <!-- Success response -->
-      <div v-else key="response" class="py-12">
+      <!-- Yes response -->
+      <div v-else-if="response === 'yes'" key="yes-response" class="py-12">
         <div class="text-8xl mb-8 animate-heart-beat">💕</div>
 
         <h2 class="text-4xl md:text-5xl font-bold mb-6">
@@ -99,12 +109,13 @@ const sayYes = () => {
         </h2>
 
         <div class="space-y-4 text-xl text-white/80">
-          <p>Thank you for these amazing 4 months.</p>
-          <p>Here's to many more adventures together.</p>
+          <p>Thank you for these amazing months.</p>
+          <p>I'm so grateful in a sea of people, and across this great and big world of ours. We found each other, despite overwhelming odds.</p>
+          <p>Here's to our great adventure together.</p>
         </div>
 
         <div class="mt-12">
-          <div class="text-6xl">
+          <div class="text-4xl md:text-6xl whitespace-nowrap">
             🎉✨💝✨🎉
           </div>
         </div>
@@ -112,6 +123,30 @@ const sayYes = () => {
         <p class="mt-8 text-white/60 italic">
           Happy Valentine's Day, Elizabeth
         </p>
+      </div>
+
+      <!-- Maybe response -->
+      <div v-else key="maybe-response" class="py-12">
+        <div class="text-8xl mb-8">💔😢💔</div>
+
+        <h2 class="text-3xl md:text-4xl font-bold mb-6">
+          I didn't expect this response...
+        </h2>
+
+        <div class="space-y-4 text-lg text-white/70">
+          <p>Maybe it was a misclick? 🥺</p>
+          <p>If not, only time can heal my wound 😭</p>
+        </div>
+
+        <div class="mt-12">
+          <button
+            @click="response = null; isOpen = false"
+            class="px-8 py-3 bg-white/20 hover:bg-white/30 text-white rounded-full font-medium
+                   transition-all transform hover:scale-105 backdrop-blur-sm"
+          >
+            Okay fine, let me reconsider 💕
+          </button>
+        </div>
       </div>
     </transition>
   </div>

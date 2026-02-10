@@ -35,7 +35,7 @@ const dayAbbrevs = {
 </script>
 
 <template>
-  <div class="text-white max-w-4xl mx-auto px-4 w-full">
+  <div class="text-white max-w-4xl mx-auto px-4 w-full overflow-hidden">
     <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">
       Our Vocabulary
     </h2>
@@ -136,31 +136,29 @@ const dayAbbrevs = {
         >
           <div
             @click="toggleMonth(item.month)"
-            class="bg-white/10 backdrop-blur-sm rounded-xl p-4 flex items-center gap-4 cursor-pointer hover:bg-white/15 transition-colors"
+            class="bg-white/10 backdrop-blur-sm rounded-xl p-4 cursor-pointer hover:bg-white/15 transition-colors"
             :class="{ 'rounded-b-none': expandedMonth === item.month }"
           >
-            <div class="w-20 text-sm font-medium text-white/70 shrink-0">
-              {{ item.month }}
+            <div class="flex items-center justify-between mb-1">
+              <span class="text-sm font-medium text-white/70">{{ item.month }}</span>
+              <svg
+                class="w-4 h-4 text-white/40 shrink-0 transition-transform duration-300"
+                :class="{ 'rotate-180': expandedMonth === item.month }"
+                fill="none" viewBox="0 0 24 24" stroke="currentColor"
+              >
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
             </div>
-            <div class="flex-1 flex items-center gap-6">
-              <div class="flex items-center gap-2 flex-1">
-                <span class="text-white/50 text-xs uppercase tracking-wide w-12">Word</span>
+            <div class="grid grid-cols-2 gap-2">
+              <div class="flex items-center gap-2">
                 <span class="font-bold text-lg">"{{ item.word }}"</span>
                 <span class="text-white/40 text-xs">&times;{{ item.wordCount }}</span>
               </div>
-              <div class="flex items-center gap-2 flex-1">
-                <span class="text-white/50 text-xs uppercase tracking-wide w-12">Emoji</span>
-                <span class="text-2xl">{{ item.emoji }}</span>
+              <div class="flex items-center gap-2">
+                <span class="text-xl">{{ item.emoji }}</span>
                 <span class="text-white/40 text-xs">&times;{{ item.emojiCount }}</span>
               </div>
             </div>
-            <svg
-              class="w-4 h-4 text-white/40 shrink-0 transition-transform duration-300"
-              :class="{ 'rotate-180': expandedMonth === item.month }"
-              fill="none" viewBox="0 0 24 24" stroke="currentColor"
-            >
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-            </svg>
           </div>
 
           <!-- Expanded top 10 dropdown -->
@@ -169,7 +167,7 @@ const dayAbbrevs = {
               v-if="expandedMonth === item.month"
               class="bg-white/5 backdrop-blur-sm rounded-b-xl px-4 pb-4 pt-2 border-t border-white/5"
             >
-              <div class="grid grid-cols-2 gap-4">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <!-- Top 10 Words -->
                 <div>
                   <p class="text-white/50 text-xs uppercase tracking-wide mb-2">Top Words</p>
@@ -229,31 +227,29 @@ const dayAbbrevs = {
         >
           <div
             @click="toggleDay(item.day)"
-            class="bg-white/10 backdrop-blur-sm rounded-xl p-3 flex items-center gap-4 cursor-pointer hover:bg-white/15 transition-colors"
+            class="bg-white/10 backdrop-blur-sm rounded-xl p-3 cursor-pointer hover:bg-white/15 transition-colors"
             :class="{ 'rounded-b-none': expandedDay === item.day }"
           >
-            <div class="w-10 text-sm font-medium text-white/70 shrink-0">
-              {{ dayAbbrevs[item.day] }}
+            <div class="flex items-center justify-between mb-1">
+              <span class="text-sm font-medium text-white/70">{{ dayAbbrevs[item.day] }}</span>
+              <svg
+                class="w-4 h-4 text-white/40 shrink-0 transition-transform duration-300"
+                :class="{ 'rotate-180': expandedDay === item.day }"
+                fill="none" viewBox="0 0 24 24" stroke="currentColor"
+              >
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
             </div>
-            <div class="flex-1 flex items-center gap-6">
-              <div class="flex items-center gap-2 flex-1">
-                <span class="text-white/50 text-xs uppercase tracking-wide w-12">Word</span>
+            <div class="grid grid-cols-2 gap-2">
+              <div class="flex items-center gap-2">
                 <span class="font-bold">"{{ item.word }}"</span>
                 <span class="text-white/40 text-xs">&times;{{ item.wordCount }}</span>
               </div>
-              <div class="flex items-center gap-2 flex-1">
-                <span class="text-white/50 text-xs uppercase tracking-wide w-12">Emoji</span>
+              <div class="flex items-center gap-2">
                 <span class="text-xl">{{ item.emoji }}</span>
                 <span class="text-white/40 text-xs">&times;{{ item.emojiCount }}</span>
               </div>
             </div>
-            <svg
-              class="w-4 h-4 text-white/40 shrink-0 transition-transform duration-300"
-              :class="{ 'rotate-180': expandedDay === item.day }"
-              fill="none" viewBox="0 0 24 24" stroke="currentColor"
-            >
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-            </svg>
           </div>
 
           <!-- Expanded top 10 dropdown -->
@@ -262,7 +258,7 @@ const dayAbbrevs = {
               v-if="expandedDay === item.day"
               class="bg-white/5 backdrop-blur-sm rounded-b-xl px-4 pb-4 pt-2 border-t border-white/5"
             >
-              <div class="grid grid-cols-2 gap-4">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <!-- Top 10 Words -->
                 <div>
                   <p class="text-white/50 text-xs uppercase tracking-wide mb-2">Top Words</p>
