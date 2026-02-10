@@ -235,7 +235,7 @@ const subtitle = computed(() => {
         </div>
       </div>
 
-      <div class="min-w-[500px]">
+      <div class="min-w-[320px]">
         <!-- Hours header -->
         <div class="flex items-center mb-2">
           <div class="w-12 shrink-0"></div>

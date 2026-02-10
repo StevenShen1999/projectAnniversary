@@ -1,6 +1,11 @@
 <script setup>
 import { ref } from 'vue'
+import { useRouter } from 'vue-router'
+import { useGameStore } from '../../stores/gameStore'
 import { wrappedContent } from '../../data/wrapped-content'
+
+const router = useRouter()
+const store = useGameStore()
 
 const isOpen = ref(false)
 const response = ref(null) // null, 'yes', 'maybe'
@@ -17,6 +22,11 @@ const sayYes = () => {
 
 const sayMaybe = () => {
   response.value = 'maybe'
+}
+
+const restartEverything = () => {
+  store.resetProgress()
+  router.push('/')
 }
 </script>
 
@@ -123,6 +133,14 @@ const sayMaybe = () => {
         <p class="mt-8 text-white/60 italic">
           Happy Valentine's Day, Elizabeth
         </p>
+
+        <button
+          @click="restartEverything"
+          class="mt-10 px-6 py-2 bg-white/10 hover:bg-white/20 text-white/50 hover:text-white/70 rounded-full text-sm font-medium
+                 transition-all transform hover:scale-105 backdrop-blur-sm"
+        >
+          Start over from the beginning
+        </button>
       </div>
 
       <!-- Maybe response -->

@@ -36,7 +36,7 @@ const submit = () => {
           class="flex flex-col items-center gap-2 p-4 rounded-xl border-2 transition-all duration-300"
           :class="{
             'border-rose-200 bg-white hover:border-rose-400 hover:shadow-md': selectedOption !== option && !error,
-            'border-rose-600 bg-rose-50 shadow-lg scale-105': selectedOption === option && !error,
+            'border-rose-500 ring-2 ring-rose-300 bg-rose-50 shadow-lg scale-105': selectedOption === option && !error,
             'border-red-500 bg-red-50 animate-shake': error && selectedOption === option
           }"
         >

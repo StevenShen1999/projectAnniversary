@@ -67,7 +67,7 @@ onMounted(() => {
           <div class="text-3xl md:text-4xl font-bold mb-2">
             {{ stat.value }}
           </div>
-          <div class="text-white/70 text-sm md:text-base">
+          <div class="text-white/70 text-xs md:text-base whitespace-nowrap">
             {{ stat.label }}
           </div>
         </div>
