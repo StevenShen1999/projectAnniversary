@@ -1,33 +1,47 @@
 <script setup>
-import { ref, onMounted, computed } from 'vue'
-import { wrappedContent } from '../../data/wrapped-content'
+import { ref, watch, onMounted, computed } from 'vue'
+import { messagingStatsData } from '../../data/word-emoji-stats'
 
-const stats = wrappedContent.messagingStats
-const animatedValue = ref(0)
+const person = ref('combined') // 'combined', 'steven', 'elizabeth'
 const perspective = ref('his') // 'his' = AEDT (UTC+11), 'hers' = Saint Petersburg (UTC+3)
 
-onMounted(() => {
-  const target = stats.totalMessages || 10000
-  const duration = 2000
+const activeMessaging = computed(() => messagingStatsData[person.value])
+
+const animatedValue = ref(0)
+let animationFrame = null
+
+function animateToTarget(target) {
+  if (animationFrame) cancelAnimationFrame(animationFrame)
   const start = Date.now()
+  const startVal = animatedValue.value
+  const duration = 1200
 
   const animate = () => {
     const elapsed = Date.now() - start
     const progress = Math.min(elapsed / duration, 1)
     const eased = 1 - Math.pow(1 - progress, 3)
-    animatedValue.value = Math.floor(target * eased)
+    animatedValue.value = Math.floor(startVal + (target - startVal) * eased)
 
     if (progress < 1) {
-      requestAnimationFrame(animate)
+      animationFrame = requestAnimationFrame(animate)
     }
   }
 
   animate()
+}
+
+onMounted(() => {
+  animateToTarget(activeMessaging.value.totalMessages)
+})
+
+// Re-animate when person changes
+watch(person, () => {
+  animateToTarget(activeMessaging.value.totalMessages)
 })
 
 const baseHeatmapData = computed(() => {
-  if (stats.heatmapData && stats.heatmapData.length > 0) {
-    return stats.heatmapData
+  if (activeMessaging.value.heatmapData && activeMessaging.value.heatmapData.length > 0) {
+    return activeMessaging.value.heatmapData
   }
 
   const data = []
@@ -96,10 +110,18 @@ const peakHourLabel = computed(() => {
   return `${displayHour} ${period}`
 })
 
+const heatmapMax = computed(() => {
+  let max = 1
+  for (const entry of heatmapData.value) {
+    if (entry.count > max) max = entry.count
+  }
+  return max
+})
+
 const getHeatmapColor = (count) => {
-  const max = 100
-  const intensity = Math.min(count / max, 1)
-  const alpha = 0.2 + intensity * 0.8
+  if (count === 0) return 'rgba(255, 255, 255, 0.03)'
+  const t = Math.pow(count / heatmapMax.value, 0.45) // aggressive curve to spread low values
+  const alpha = 0.08 + t * 0.92
   return `rgba(255, 255, 255, ${alpha})`
 }
 
@@ -123,6 +145,12 @@ const showTooltip = (event, dayIndex, hour) => {
 const hideTooltip = () => {
   tooltip.value.show = false
 }
+
+const subtitle = computed(() => {
+  if (person.value === 'steven') return "Steven's messaging heatmap"
+  if (person.value === 'elizabeth') return "Elizabeth's messaging heatmap"
+  return 'Our messaging heatmap'
+})
 </script>
 
 <template>
@@ -131,9 +159,45 @@ const hideTooltip = () => {
       When We Talk Most
     </h2>
 
-    <p class="text-center text-white/60 mb-8">
-      Our messaging heatmap
+    <p class="text-center text-white/60 mb-6">
+      {{ subtitle }}
     </p>
+
+    <!-- Person toggle -->
+    <div class="flex justify-center mb-6">
+      <div class="bg-white/10 rounded-full p-1 flex gap-1">
+        <button
+          @click="person = 'combined'"
+          class="px-4 py-1.5 rounded-full text-sm font-medium transition-all duration-300"
+          :class="{
+            'bg-white text-rose-600': person === 'combined',
+            'text-white/70 hover:text-white': person !== 'combined'
+          }"
+        >
+          Both
+        </button>
+        <button
+          @click="person = 'steven'"
+          class="px-4 py-1.5 rounded-full text-sm font-medium transition-all duration-300"
+          :class="{
+            'bg-white text-rose-600': person === 'steven',
+            'text-white/70 hover:text-white': person !== 'steven'
+          }"
+        >
+          Steven
+        </button>
+        <button
+          @click="person = 'elizabeth'"
+          class="px-4 py-1.5 rounded-full text-sm font-medium transition-all duration-300"
+          :class="{
+            'bg-white text-rose-600': person === 'elizabeth',
+            'text-white/70 hover:text-white': person !== 'elizabeth'
+          }"
+        >
+          Elizabeth
+        </button>
+      </div>
+    </div>
 
     <!-- Big number display -->
     <div class="text-center mb-12">
@@ -173,21 +237,23 @@ const hideTooltip = () => {
 
       <div class="min-w-[500px]">
         <!-- Hours header -->
-        <div class="flex mb-2 pl-12">
-          <div
-            v-for="hour in [0, 6, 12, 18, 23]"
-            :key="'hour-' + hour"
-            class="text-xs text-white/40"
-            :style="{ width: (hour === 0 ? 0 : 24) + '%', textAlign: hour === 23 ? 'right' : 'left' }"
-          >
-            {{ hour }}:00
+        <div class="flex items-center mb-2">
+          <div class="w-12 shrink-0"></div>
+          <div class="flex-1 flex gap-0.5">
+            <div
+              v-for="h in hours"
+              :key="'label-' + h"
+              class="flex-1 text-center"
+            >
+              <span v-if="h % 6 === 0" class="text-xs text-white/40">{{ h }}:00</span>
+            </div>
           </div>
         </div>
 
         <!-- Rows by day -->
         <div class="space-y-1">
           <div v-for="(day, dayIndex) in days" :key="day" class="flex items-center">
-            <div class="w-12 text-xs text-white/60">{{ day }}</div>
+            <div class="w-12 text-xs text-white/60 shrink-0">{{ day }}</div>
             <div class="flex-1 flex gap-0.5">
               <div
                 v-for="hour in hours"
