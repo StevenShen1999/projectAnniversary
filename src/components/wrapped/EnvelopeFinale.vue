@@ -26,7 +26,7 @@ const sayMaybe = () => {
 
 const restartEverything = () => {
   store.resetProgress()
-  router.push('/')
+  router.replace('/')
 }
 </script>
 

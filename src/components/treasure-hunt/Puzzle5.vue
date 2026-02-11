@@ -9,7 +9,7 @@ const answer = ref('')
 const error = ref(false)
 
 const submit = async () => {
-  if (await checkAnswer(4, answer.value)) {
+  if (await checkAnswer(3, answer.value)) {
     emit('solved')
   } else {
     error.value = true
@@ -22,6 +22,7 @@ const submit = async () => {
   <div class="space-y-6">
     <div class="text-center text-rose-700/80 text-lg">
       <p>{{ puzzle.question }}</p>
+      <p class="text-sm mt-2 text-rose-500/70 italic">English or Cyrillic accepted (Russian and Belarusian spellings both work)</p>
     </div>
 
     <div class="max-w-md mx-auto">

@@ -72,7 +72,10 @@ export function useGameStore() {
   }
 
   const resetProgress = () => {
-    Object.assign(state, { ...defaultState })
+    state.puzzlesCompleted = [false, false, false, false, false, false, false, false]
+    state.currentPuzzle = 0
+    state.wrappedUnlocked = false
+    state.currentSlide = 0
   }
 
   // Dev helper - unlock all puzzles
