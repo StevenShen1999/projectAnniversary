@@ -75,14 +75,14 @@ const restartEverything = () => {
               class="absolute left-4 right-4 bg-white rounded-lg shadow-lg p-6 text-rose-700"
               style="bottom: 20px; transform-origin: bottom center;"
             >
-              <p class="text-lg md:text-xl font-medium leading-relaxed">
+              <p class="text-base md:text-lg font-medium leading-relaxed">
                 {{ wrappedContent.finale.question }}
               </p>
 
-              <div class="flex flex-col items-center gap-3 mt-6">
+              <div class="flex flex-col items-center gap-2 mt-4">
                 <button
                   @click="sayYes"
-                  class="px-8 py-3 bg-rose-500 text-white rounded-full font-bold
+                  class="px-8 py-2.5 bg-rose-500 text-white rounded-full font-bold
                          hover:bg-rose-600 transition-all transform hover:scale-105
                          shadow-lg hover:shadow-xl"
                 >
@@ -90,7 +90,7 @@ const restartEverything = () => {
                 </button>
                 <button
                   @click="sayMaybe"
-                  class="px-6 py-2 bg-rose-200 text-rose-600 rounded-full text-sm font-medium
+                  class="px-6 py-1.5 bg-rose-200 text-rose-600 rounded-full text-sm font-medium
                          hover:bg-rose-300 transition-all transform hover:scale-105
                          shadow hover:shadow-md"
                 >
@@ -98,7 +98,7 @@ const restartEverything = () => {
                 </button>
               </div>
 
-              <p class="mt-4 text-rose-400 italic text-sm">
+              <p class="mt-2 text-rose-400 italic text-xs whitespace-nowrap">
                 {{ wrappedContent.finale.signature }}
               </p>
             </div>
@@ -145,7 +145,7 @@ const restartEverything = () => {
 
       <!-- Maybe response -->
       <div v-else key="maybe-response" class="py-12">
-        <div class="text-8xl mb-8">💔😢💔</div>
+        <div class="text-8xl mb-8 whitespace-nowrap">💔😢💔</div>
 
         <h2 class="text-3xl md:text-4xl font-bold mb-6">
           I didn't expect this response...
@@ -154,6 +154,7 @@ const restartEverything = () => {
         <div class="space-y-4 text-lg text-white/70">
           <p>Maybe it was a misclick? 🥺</p>
           <p>If not, only time can heal my wound 😭</p>
+          <p>But I will work harder and try to be the best version of myself, so that I may win you over one day.</p>
         </div>
 
         <div class="mt-12">

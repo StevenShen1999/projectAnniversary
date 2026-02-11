@@ -218,6 +218,6 @@ export const wrappedContent = {
     question:
       "Would you do me the honour of being my valentine, my beloved Elizabeth?",
     yesResponse: "My heart is yours, Lisa! 💕",
-    signature: "With love from Australia",
+    signature: "Forever yours, Steven (aka Himbo)",
   },
 };
