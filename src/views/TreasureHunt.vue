@@ -36,7 +36,7 @@ watch(() => store.allPuzzlesCompleted.value, (completed) => {
 })
 
 const progressPercent = computed(() => {
-  return (store.completedCount.value / 7) * 100
+  return (store.completedCount.value / 8) * 100
 })
 </script>
 
@@ -74,14 +74,14 @@ const progressPercent = computed(() => {
           A Treasure Hunt for Elizabeth
         </h1>
         <p class="text-rose-600/80 text-lg">
-          Solve all 7 puzzles to unlock your surprise
+          Solve all 8 puzzles to unlock your surprise
         </p>
 
         <!-- Progress bar -->
         <div class="max-w-md mx-auto mt-6">
           <div class="flex justify-between text-sm text-rose-600 mb-2">
             <span>Progress</span>
-            <span>{{ store.completedCount.value }} / 7</span>
+            <span>{{ store.completedCount.value }} / 8</span>
           </div>
           <div class="h-3 bg-white/50 rounded-full overflow-hidden shadow-inner">
             <div

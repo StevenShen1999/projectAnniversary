@@ -3,7 +3,7 @@ import { reactive, computed, watch } from 'vue'
 const STORAGE_KEY = 'elizabeth-valentine-progress'
 
 const defaultState = {
-  puzzlesCompleted: [false, false, false, false, false, false, false],
+  puzzlesCompleted: [false, false, false, false, false, false, false, false],
   currentPuzzle: 0,
   wrappedUnlocked: false,
   currentSlide: 0
@@ -52,7 +52,7 @@ export function useGameStore() {
   const completePuzzle = (index) => {
     if (index >= 0 && index < state.puzzlesCompleted.length) {
       state.puzzlesCompleted[index] = true
-      if (index < 6) {
+      if (index < 7) {
         state.currentPuzzle = index + 1
       }
       if (allPuzzlesCompleted.value) {
@@ -77,7 +77,7 @@ export function useGameStore() {
 
   // Dev helper - unlock all puzzles
   const unlockAll = () => {
-    state.puzzlesCompleted = [true, true, true, true, true, true, true]
+    state.puzzlesCompleted = [true, true, true, true, true, true, true, true]
     state.wrappedUnlocked = true
   }
 

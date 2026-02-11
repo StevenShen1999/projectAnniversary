@@ -39,7 +39,7 @@ const removeLetter = (position) => {
 }
 
 const submit = async () => {
-  if (await checkAnswer(3, currentAnswer.value)) {
+  if (await checkAnswer(2, currentAnswer.value)) {
     emit('solved')
   } else {
     error.value = true

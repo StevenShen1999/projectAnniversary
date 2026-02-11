@@ -17,27 +17,20 @@ export const puzzles = [
   },
   {
     id: 2,
-    title: "Classified Intel",
-    question: "This is something that only she would know. Disguise is always a self portrait.",
-    type: "three-part-input",
-    answerHash: "d028060b19d659558317574b64ddf44341bdc93041e6597943ca68cce576770f"
-  },
-  {
-    id: 3,
     title: "What's In a Name?",
     question: "What is the nickname she always calls me with?",
     type: "text-input",
     answerHash: "6ddc282b3a30d9cb0cb39d0eb48dee4368bcefd30ba2d31734e725c967b90448"
   },
   {
-    id: 4,
+    id: 3,
     title: "Bonding Moments",
     question: "On our weekends, what is our favourite past time?",
     type: "word-scramble",
     answerHash: "064859fd8c4f47c6d516076500738d71e895ce894fb4038c7f6641f2f8c1642b"
   },
   {
-    id: 5,
+    id: 4,
     title: "Not From Russia With Love",
     question: 'Many may confuse her as a Russian, but she is in fact from Belarus, a city called',
     type: "text-input",
@@ -49,15 +42,14 @@ export const puzzles = [
     ]
   },
   {
-    id: 6,
-    title: "The Full Package",
-    question: "What are her virtues which I deeply admire?",
-    type: "multi-select",
-    options: ["Empathy", "Intelligence", "Mental Fortitude", "Loving"],
-    answerHash: "2ceb3a60b0b4cdabf815f6720d5860f71748ad63e4eb47cec1b3ab18a933bdd8"
+    id: 5,
+    title: "For Her Eyes (And Ears) Only",
+    question: "She once told me she has only been to one band's live concert. What is that band?",
+    type: "concert-ticket",
+    answerHash: "1ce05c22f7920641660dd3abfa241090175492d710e7d53ba1b0ef22daeff172"
   },
   {
-    id: 7,
+    id: 6,
     title: "Non-Negotiable",
     question: "What is her absolute must daily routine?",
     type: "emoji-select",
@@ -70,6 +62,21 @@ export const puzzles = [
       { emoji: "\u{1F3B5}", label: "Music" }
     ],
     answerHash: "b10c94bd8ae38a2a37365b6d81c4ae1e121cccbcc233c8bdb4238eee7e85e657"
+  },
+  {
+    id: 7,
+    title: "Classified Intel",
+    question: "This is something that only she would know. Disguise is always a self portrait.",
+    type: "three-part-input",
+    answerHash: "d028060b19d659558317574b64ddf44341bdc93041e6597943ca68cce576770f"
+  },
+  {
+    id: 8,
+    title: "The Full Package",
+    question: "What are her virtues which I deeply admire?",
+    type: "multi-select",
+    options: ["Empathy", "Intelligence", "Mental Fortitude", "Loving"],
+    answerHash: "2ceb3a60b0b4cdabf815f6720d5860f71748ad63e4eb47cec1b3ab18a933bdd8"
   }
 ]
 

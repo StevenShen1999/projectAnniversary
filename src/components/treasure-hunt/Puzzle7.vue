@@ -15,7 +15,7 @@ const selectOption = (option) => {
 }
 
 const submit = async () => {
-  if (selectedOption.value && await checkAnswer(6, selectedOption.value.label)) {
+  if (selectedOption.value && await checkAnswer(5, selectedOption.value.label)) {
     emit('solved')
   } else {
     error.value = true
