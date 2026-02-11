@@ -7,6 +7,7 @@ import PuzzleContainer from '../components/treasure-hunt/PuzzleContainer.vue'
 const router = useRouter()
 const store = useGameStore()
 
+const isDev = import.meta.env.DEV
 const showIntro = ref(true)
 const showUnlockAnimation = ref(false)
 
@@ -104,8 +105,8 @@ const progressPercent = computed(() => {
       </div>
     </transition>
 
-    <!-- Dev controls (remove in production) -->
-    <div class="fixed bottom-4 right-4 opacity-30 hover:opacity-100 transition-opacity">
+    <!-- Dev controls (only in development) -->
+    <div v-if="isDev" class="fixed bottom-4 right-4 opacity-30 hover:opacity-100 transition-opacity">
       <button
         @click="store.unlockAll()"
         class="text-xs bg-gray-800 text-white px-3 py-1 rounded"
