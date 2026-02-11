@@ -1,5 +1,5 @@
 <script setup>
-import { ref, computed, watch } from 'vue'
+import { ref, computed, watch, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
 import { useGameStore } from '../stores/gameStore'
 import PuzzleContainer from '../components/treasure-hunt/PuzzleContainer.vue'
@@ -15,12 +15,23 @@ const dismissIntro = () => {
   showIntro.value = false
 }
 
+const navigateToWrapped = () => {
+  showUnlockAnimation.value = true
+  setTimeout(() => {
+    router.push('/wrapped')
+  }, 3000)
+}
+
+// If all puzzles already completed from previous session, go straight to wrapped
+onMounted(() => {
+  if (store.allPuzzlesCompleted.value) {
+    navigateToWrapped()
+  }
+})
+
 watch(() => store.allPuzzlesCompleted.value, (completed) => {
   if (completed) {
-    showUnlockAnimation.value = true
-    setTimeout(() => {
-      router.push('/wrapped')
-    }, 3000)
+    navigateToWrapped()
   }
 })
 
