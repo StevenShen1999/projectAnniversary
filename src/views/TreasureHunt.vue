@@ -18,8 +18,12 @@ const dismissIntro = () => {
 const navigateToWrapped = () => {
   showUnlockAnimation.value = true
   setTimeout(() => {
-    router.push('/wrapped')
+    goToWrapped()
   }, 3000)
+}
+
+const goToWrapped = () => {
+  router.push('/wrapped')
 }
 
 // If all puzzles already completed from previous session, go straight to wrapped
@@ -102,7 +106,8 @@ const progressPercent = computed(() => {
     <transition name="fade">
       <div
         v-if="showUnlockAnimation"
-        class="fixed inset-0 bg-gradient-to-br from-rose-500 to-pink-600 z-50 flex items-center justify-center"
+        class="fixed inset-0 bg-gradient-to-br from-rose-500 to-pink-600 z-50 flex items-center justify-center cursor-pointer"
+        @click="goToWrapped"
       >
         <div class="text-center text-white">
           <div class="text-8xl mb-6 animate-heart-beat">💕</div>
@@ -110,7 +115,7 @@ const progressPercent = computed(() => {
             All Puzzles Complete!
           </h2>
           <p class="text-xl opacity-90">
-            Unlocking your surprise...
+            Tap to continue...
           </p>
         </div>
       </div>

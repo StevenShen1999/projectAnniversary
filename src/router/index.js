@@ -13,7 +13,7 @@ const routes = [
     component: () => import('../views/Wrapped.vue'),
     beforeEnter: (to, from, next) => {
       const store = useGameStore()
-      if (store.allPuzzlesCompleted) {
+      if (store.allPuzzlesCompleted.value) {
         next()
       } else {
         next({ name: 'treasure-hunt' })
