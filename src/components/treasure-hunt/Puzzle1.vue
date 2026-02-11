@@ -22,8 +22,8 @@ const selectColour = (colour) => {
   selectedColour.value = colour
 }
 
-const submit = () => {
-  if (checkAnswer(0, selectedColour.value)) {
+const submit = async () => {
+  if (await checkAnswer(0, selectedColour.value)) {
     emit('solved')
   } else {
     error.value = true

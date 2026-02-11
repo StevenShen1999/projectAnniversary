@@ -8,8 +8,8 @@ const emit = defineEmits(['solved'])
 const answer = ref('')
 const error = ref(false)
 
-const submit = () => {
-  if (checkAnswer(2, answer.value)) {
+const submit = async () => {
+  if (await checkAnswer(2, answer.value)) {
     emit('solved')
   } else {
     error.value = true

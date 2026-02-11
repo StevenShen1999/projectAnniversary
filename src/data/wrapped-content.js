@@ -1,6 +1,10 @@
 // Wrapped slideshow content
 import elizabethFirstImage from "../assets/photos/elizbaeth_first_image.jpg";
 import stevenFirstImage from "../assets/photos/steven_first_image.jpg";
+import elizabethFirstAudio from "../assets/audio_messages/first_audio_message_elizabeth.ogg";
+import stevenFirstAudio from "../assets/audio_messages/first_audio_message_steven.ogg";
+import elizabethFirstVideo from "../assets/video_messages/first_video_message_elizbaeth.mp4";
+import stevenFirstVideo from "../assets/video_messages/first_video_message_steven.mp4";
 
 export const wrappedContent = {
   intro: {
@@ -38,18 +42,50 @@ export const wrappedContent = {
     },
   ],
 
-  images: {
-    firstOfHer: {
+  firsts: [
+    {
+      type: "photo",
       src: elizabethFirstImage,
       caption: "The first photo that you sent me",
       date: "Dec 14, 2025",
+      icon: "📷",
     },
-    firstSent: {
+    {
+      type: "photo",
       src: stevenFirstImage,
       caption: "The first photo that I sent you",
       date: "Nov 21, 2025",
+      icon: "📸",
     },
-  },
+    {
+      type: "voice",
+      src: elizabethFirstAudio,
+      caption: "The first voice message that you sent me",
+      date: "Nov 21, 2025",
+      icon: "🎤",
+    },
+    {
+      type: "voice",
+      src: stevenFirstAudio,
+      caption: "The first voice message that I sent you",
+      date: "Nov 23, 2025",
+      icon: "🎙️",
+    },
+    {
+      type: "video",
+      src: elizabethFirstVideo,
+      caption: "The first video message that you sent me",
+      date: "Nov 21, 2025",
+      icon: "🎬",
+    },
+    {
+      type: "video",
+      src: stevenFirstVideo,
+      caption: "The first video message that I sent you",
+      date: "Jan 1, 2026",
+      icon: "🎥",
+    },
+  ],
 
   messagingStats: {
     totalMessages: 12340,

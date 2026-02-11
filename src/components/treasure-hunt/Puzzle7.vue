@@ -1,5 +1,6 @@
 <script setup>
 import { ref } from 'vue'
+import { checkAnswer } from '../../data/puzzles'
 
 const props = defineProps(['puzzle'])
 const emit = defineEmits(['solved'])
@@ -13,8 +14,8 @@ const selectOption = (option) => {
   selectedOption.value = option
 }
 
-const submit = () => {
-  if (selectedOption.value && selectedOption.value.correct) {
+const submit = async () => {
+  if (selectedOption.value && await checkAnswer(6, selectedOption.value.label)) {
     emit('solved')
   } else {
     error.value = true

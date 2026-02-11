@@ -80,9 +80,6 @@ const getPuzzleStatus = (index) => {
           <h2 class="text-3xl font-bold gradient-text mt-1">
             {{ currentPuzzleData.title }}
           </h2>
-          <p class="text-rose-600/70 mt-1">
-            {{ currentPuzzleData.subtitle }}
-          </p>
         </div>
 
         <component

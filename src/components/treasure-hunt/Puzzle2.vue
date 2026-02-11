@@ -29,8 +29,8 @@ const onInput = (part, event) => {
   }
 }
 
-const submit = () => {
-  if (checkAnswer(1, fullAnswer.value)) {
+const submit = async () => {
+  if (await checkAnswer(1, fullAnswer.value)) {
     emit('solved')
   } else {
     error.value = true

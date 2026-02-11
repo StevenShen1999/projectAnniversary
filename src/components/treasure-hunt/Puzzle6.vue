@@ -19,8 +19,8 @@ const toggleOption = (option) => {
 
 const isSelected = (option) => selected.value.includes(option)
 
-const submit = () => {
-  if (checkAnswer(5, selected.value)) {
+const submit = async () => {
+  if (await checkAnswer(5, selected.value)) {
     emit('solved')
   } else {
     error.value = true

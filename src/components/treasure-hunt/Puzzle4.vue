@@ -38,8 +38,8 @@ const removeLetter = (position) => {
   selectedIndices.value.splice(position, 1)
 }
 
-const submit = () => {
-  if (checkAnswer(3, currentAnswer.value)) {
+const submit = async () => {
+  if (await checkAnswer(3, currentAnswer.value)) {
     emit('solved')
   } else {
     error.value = true
