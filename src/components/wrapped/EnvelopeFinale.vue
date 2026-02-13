@@ -120,8 +120,8 @@ const restartEverything = () => {
 
         <div class="space-y-4 text-xl text-white/80">
           <p>Thank you for these amazing months.</p>
-          <p>I'm so grateful in a sea of people, and across this great and big world of ours. We found each other, despite overwhelming odds.</p>
-          <p>Here's to our great adventure together.</p>
+          <p>I'm so grateful in a sea of people, and across this great and big world of ours; We found each other, despite such overwhelming odds.</p>
+          <p>Here's to the unwritten chapters of our great adventure together!</p>
         </div>
 
         <div class="mt-12">
@@ -139,22 +139,22 @@ const restartEverything = () => {
           class="mt-10 px-6 py-2 bg-white/10 hover:bg-white/20 text-white/50 hover:text-white/70 rounded-full text-sm font-medium
                  transition-all transform hover:scale-105 backdrop-blur-sm"
         >
-          Start over from the beginning
+          Restart the puzzle from the beginning
         </button>
       </div>
 
       <!-- Maybe response -->
       <div v-else key="maybe-response" class="py-12">
-        <div class="text-8xl mb-8 whitespace-nowrap">💔😢💔</div>
+        <div class="text-8xl mb-8 whitespace-nowrap">💔🥹💔</div>
 
         <h2 class="text-3xl md:text-4xl font-bold mb-6">
-          I didn't expect this response...
+          Well, I won't pretend that didn't sting a little...
         </h2>
 
         <div class="space-y-4 text-lg text-white/70">
-          <p>Maybe it was a misclick? 🥺</p>
-          <p>If not, only time can heal my wound 😭</p>
-          <p>But I will work harder and try to be the best version of myself, so that I may win you over one day.</p>
+          <p>But I mean it when I say, no hard feelings at all. You deserve someone who makes you feel sure, and I respect you too much to make this awkward.</p>
+          <p>I'm grateful just to know you, and that's not going to change.</p>
+          <p>Wishing you all the best, always.</p>
         </div>
 
         <div class="mt-12">
@@ -163,7 +163,7 @@ const restartEverything = () => {
             class="px-8 py-3 bg-white/20 hover:bg-white/30 text-white rounded-full font-medium
                    transition-all transform hover:scale-105 backdrop-blur-sm"
           >
-            Okay fine, let me reconsider 💕
+            Oops, I misclicked 💕
           </button>
         </div>
       </div>

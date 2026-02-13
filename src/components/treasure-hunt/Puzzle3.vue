@@ -9,7 +9,7 @@ const answer = ref('')
 const error = ref(false)
 
 const submit = async () => {
-  if (await checkAnswer(2, answer.value)) {
+  if (await checkAnswer(1, answer.value)) {
     emit('solved')
   } else {
     error.value = true

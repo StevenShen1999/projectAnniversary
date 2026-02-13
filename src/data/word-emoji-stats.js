@@ -5,9 +5,9 @@ export const wordEmojiStats = {
   "combined": {
     "overall": {
       "word": "damn",
-      "wordCount": 401,
+      "wordCount": 429,
       "emoji": "😂",
-      "emojiCount": 800
+      "emojiCount": 865
     },
     "byMonth": [
       {
@@ -286,91 +286,91 @@ export const wordEmojiStats = {
       {
         "month": "Feb 2026",
         "word": "damn",
-        "wordCount": 92,
+        "wordCount": 120,
         "emoji": "😂",
-        "emojiCount": 109,
+        "emojiCount": 174,
         "topWords": [
           {
             "key": "damn",
-            "count": 92
+            "count": 120
           },
           {
             "key": "work",
-            "count": 72
-          },
-          {
-            "key": "find",
-            "count": 63
-          },
-          {
-            "key": "life",
-            "count": 58
-          },
-          {
-            "key": "ask",
-            "count": 56
+            "count": 98
           },
           {
             "key": "australia",
-            "count": 54
+            "count": 80
+          },
+          {
+            "key": "find",
+            "count": 72
+          },
+          {
+            "key": "ask",
+            "count": 70
+          },
+          {
+            "key": "life",
+            "count": 66
           },
           {
             "key": "food",
-            "count": 49
-          },
-          {
-            "key": "problems",
-            "count": 43
+            "count": 66
           },
           {
             "key": "love",
-            "count": 43
+            "count": 59
           },
           {
-            "key": "russian",
-            "count": 43
+            "key": "problems",
+            "count": 54
+          },
+          {
+            "key": "alright",
+            "count": 54
           }
         ],
         "topEmojis": [
           {
             "key": "😂",
-            "count": 109
+            "count": 174
           },
           {
             "key": "😁",
-            "count": 83
+            "count": 115
           },
           {
             "key": "😅",
-            "count": 74
+            "count": 93
           },
           {
             "key": "😄",
-            "count": 51
-          },
-          {
-            "key": "😝",
-            "count": 33
-          },
-          {
-            "key": "❤",
-            "count": 33
+            "count": 71
           },
           {
             "key": "😊",
-            "count": 31
+            "count": 57
           },
           {
-            "key": "🙏",
-            "count": 27
+            "key": "❤",
+            "count": 54
           },
           {
-            "key": "🙈",
-            "count": 26
+            "key": "😝",
+            "count": 50
           },
           {
             "key": "😭",
-            "count": 23
+            "count": 39
+          },
+          {
+            "key": "🙈",
+            "count": 28
+          },
+          {
+            "key": "🙏",
+            "count": 28
           }
         ]
       }
@@ -470,13 +470,13 @@ export const wordEmojiStats = {
       {
         "day": "Monday",
         "word": "love",
-        "wordCount": 91,
+        "wordCount": 92,
         "emoji": "😂",
-        "emojiCount": 144,
+        "emojiCount": 145,
         "topWords": [
           {
             "key": "love",
-            "count": 91
+            "count": 92
           },
           {
             "key": "find",
@@ -488,7 +488,7 @@ export const wordEmojiStats = {
           },
           {
             "key": "work",
-            "count": 65
+            "count": 66
           },
           {
             "key": "ask",
@@ -500,7 +500,7 @@ export const wordEmojiStats = {
           },
           {
             "key": "men",
-            "count": 50
+            "count": 51
           },
           {
             "key": "friends",
@@ -518,11 +518,11 @@ export const wordEmojiStats = {
         "topEmojis": [
           {
             "key": "😂",
-            "count": 144
+            "count": 145
           },
           {
             "key": "😁",
-            "count": 98
+            "count": 103
           },
           {
             "key": "😅",
@@ -530,11 +530,11 @@ export const wordEmojiStats = {
           },
           {
             "key": "😄",
-            "count": 62
+            "count": 63
           },
           {
             "key": "😊",
-            "count": 35
+            "count": 36
           },
           {
             "key": "🙏",
@@ -545,11 +545,11 @@ export const wordEmojiStats = {
             "count": 26
           },
           {
-            "key": "😝",
-            "count": 23
+            "key": "❤",
+            "count": 25
           },
           {
-            "key": "❤",
+            "key": "😝",
             "count": 23
           },
           {
@@ -561,41 +561,41 @@ export const wordEmojiStats = {
       {
         "day": "Tuesday",
         "word": "damn",
-        "wordCount": 67,
+        "wordCount": 74,
         "emoji": "😂",
-        "emojiCount": 100,
+        "emojiCount": 117,
         "topWords": [
           {
             "key": "damn",
-            "count": 67
+            "count": 74
           },
           {
             "key": "https",
+            "count": 61
+          },
+          {
+            "key": "work",
+            "count": 59
+          },
+          {
+            "key": "find",
             "count": 54
+          },
+          {
+            "key": "love",
+            "count": 53
+          },
+          {
+            "key": "com",
+            "count": 53
           },
           {
             "key": "music",
             "count": 51
           },
           {
-            "key": "find",
-            "count": 49
-          },
-          {
-            "key": "com",
-            "count": 48
-          },
-          {
-            "key": "love",
-            "count": 47
-          },
-          {
-            "key": "work",
-            "count": 45
-          },
-          {
             "key": "parents",
-            "count": 41
+            "count": 42
           },
           {
             "key": "send",
@@ -609,114 +609,122 @@ export const wordEmojiStats = {
         "topEmojis": [
           {
             "key": "😂",
-            "count": 100
+            "count": 117
           },
           {
             "key": "😄",
-            "count": 56
+            "count": 62
           },
           {
             "key": "😅",
-            "count": 50
-          },
-          {
-            "key": "😁",
-            "count": 34
-          },
-          {
-            "key": "😊",
-            "count": 27
-          },
-          {
-            "key": "😭",
-            "count": 25
-          },
-          {
-            "key": "😝",
-            "count": 16
-          },
-          {
-            "key": "🥺",
-            "count": 13
-          },
-          {
-            "key": "❤",
-            "count": 12
-          },
-          {
-            "key": "😤",
-            "count": 11
-          }
-        ]
-      },
-      {
-        "day": "Wednesday",
-        "word": "damn",
-        "wordCount": 51,
-        "emoji": "😂",
-        "emojiCount": 94,
-        "topWords": [
-          {
-            "key": "damn",
-            "count": 51
-          },
-          {
-            "key": "app",
-            "count": 43
-          },
-          {
-            "key": "find",
-            "count": 34
-          },
-          {
-            "key": "work",
-            "count": 34
-          },
-          {
-            "key": "life",
-            "count": 32
-          },
-          {
-            "key": "song",
-            "count": 29
-          },
-          {
-            "key": "person",
-            "count": 27
-          },
-          {
-            "key": "english",
-            "count": 27
-          },
-          {
-            "key": "love",
-            "count": 26
-          },
-          {
-            "key": "write",
-            "count": 26
-          }
-        ],
-        "topEmojis": [
-          {
-            "key": "😂",
-            "count": 94
+            "count": 59
           },
           {
             "key": "😁",
             "count": 41
           },
           {
-            "key": "😄",
-            "count": 36
-          },
-          {
-            "key": "😅",
-            "count": 33
+            "key": "😭",
+            "count": 37
           },
           {
             "key": "😊",
-            "count": 22
+            "count": 36
+          },
+          {
+            "key": "😝",
+            "count": 18
+          },
+          {
+            "key": "🥺",
+            "count": 16
+          },
+          {
+            "key": "❤",
+            "count": 16
+          },
+          {
+            "key": "😤",
+            "count": 15
+          }
+        ]
+      },
+      {
+        "day": "Wednesday",
+        "word": "damn",
+        "wordCount": 54,
+        "emoji": "😂",
+        "emojiCount": 104,
+        "topWords": [
+          {
+            "key": "damn",
+            "count": 54
+          },
+          {
+            "key": "app",
+            "count": 43
+          },
+          {
+            "key": "work",
+            "count": 42
+          },
+          {
+            "key": "find",
+            "count": 35
+          },
+          {
+            "key": "life",
+            "count": 34
+          },
+          {
+            "key": "person",
+            "count": 29
+          },
+          {
+            "key": "song",
+            "count": 29
+          },
+          {
+            "key": "love",
+            "count": 28
+          },
+          {
+            "key": "english",
+            "count": 27
+          },
+          {
+            "key": "photo",
+            "count": 26
+          }
+        ],
+        "topEmojis": [
+          {
+            "key": "😂",
+            "count": 104
+          },
+          {
+            "key": "😁",
+            "count": 45
+          },
+          {
+            "key": "😅",
+            "count": 39
+          },
+          {
+            "key": "😄",
+            "count": 37
+          },
+          {
+            "key": "😊",
+            "count": 30
+          },
+          {
+            "key": "😝",
+            "count": 20
+          },
+          {
+            "key": "❤",
+            "count": 17
           },
           {
             "key": "🥺",
@@ -727,15 +735,7 @@ export const wordEmojiStats = {
             "count": 15
           },
           {
-            "key": "😝",
-            "count": 12
-          },
-          {
-            "key": "❤",
-            "count": 11
-          },
-          {
-            "key": "🙈",
+            "key": "🤗",
             "count": 9
           }
         ]
@@ -743,83 +743,83 @@ export const wordEmojiStats = {
       {
         "day": "Thursday",
         "word": "work",
-        "wordCount": 72,
+        "wordCount": 75,
         "emoji": "😂",
-        "emojiCount": 161,
+        "emojiCount": 180,
         "topWords": [
           {
             "key": "work",
-            "count": 72
+            "count": 75
           },
           {
             "key": "love",
-            "count": 65
+            "count": 69
           },
           {
             "key": "damn",
-            "count": 58
-          },
-          {
-            "key": "find",
-            "count": 56
-          },
-          {
-            "key": "year",
-            "count": 54
-          },
-          {
-            "key": "parents",
-            "count": 53
+            "count": 68
           },
           {
             "key": "australia",
-            "count": 52
+            "count": 65
           },
           {
-            "key": "food",
-            "count": 51
+            "key": "find",
+            "count": 59
+          },
+          {
+            "key": "parents",
+            "count": 57
+          },
+          {
+            "key": "year",
+            "count": 56
           },
           {
             "key": "hard",
-            "count": 51
+            "count": 56
           },
           {
-            "key": "life",
-            "count": 49
+            "key": "ask",
+            "count": 53
+          },
+          {
+            "key": "usually",
+            "count": 53
           }
         ],
         "topEmojis": [
           {
             "key": "😂",
-            "count": 161
+            "count": 180
           },
           {
             "key": "😁",
-            "count": 99
+            "count": 109
           },
           {
             "key": "😅",
-            "count": 75
+            "count": 78
           },
           {
             "key": "😄",
-            "count": 56
+            "count": 61
           },
           {
             "key": "😊",
-            "count": 51
+            "count": 55
           },
           {
             "key": "❤",
-            "count": 26
+            "count": 29
           },
           {
             "key": "😝",
-            "count": 23
+            "count": 26
           },
           {
             "key": "😭",
-            "count": 23
+            "count": 25
           },
           {
             "key": "🙈",
@@ -834,28 +834,36 @@ export const wordEmojiStats = {
       {
         "day": "Friday",
         "word": "damn",
-        "wordCount": 53,
+        "wordCount": 61,
         "emoji": "😂",
-        "emojiCount": 129,
+        "emojiCount": 147,
         "topWords": [
           {
             "key": "damn",
-            "count": 53
-          },
-          {
-            "key": "different",
-            "count": 51
+            "count": 61
           },
           {
             "key": "australia",
-            "count": 49
+            "count": 54
+          },
+          {
+            "key": "different",
+            "count": 53
           },
           {
             "key": "ask",
             "count": 49
           },
           {
+            "key": "life",
+            "count": 46
+          },
+          {
             "key": "play",
+            "count": 45
+          },
+          {
+            "key": "wanted",
             "count": 44
           },
           {
@@ -867,58 +875,50 @@ export const wordEmojiStats = {
             "count": 43
           },
           {
-            "key": "life",
-            "count": 42
-          },
-          {
             "key": "game",
             "count": 42
-          },
-          {
-            "key": "wanted",
-            "count": 41
           }
         ],
         "topEmojis": [
           {
             "key": "😂",
-            "count": 129
+            "count": 147
           },
           {
             "key": "😁",
-            "count": 87
+            "count": 93
           },
           {
             "key": "😅",
-            "count": 65
+            "count": 66
           },
           {
             "key": "😄",
-            "count": 47
+            "count": 54
           },
           {
             "key": "😊",
-            "count": 33
+            "count": 37
           },
           {
             "key": "😭",
-            "count": 24
+            "count": 26
           },
           {
             "key": "❤",
-            "count": 15
+            "count": 21
           },
           {
-            "key": "😌",
-            "count": 13
+            "key": "😝",
+            "count": 14
           },
           {
             "key": "😃",
-            "count": 12
+            "count": 14
           },
           {
-            "key": "🥺",
-            "count": 12
+            "key": "😌",
+            "count": 14
           }
         ]
       },
@@ -1018,9 +1018,9 @@ export const wordEmojiStats = {
   "steven": {
     "overall": {
       "word": "damn",
-      "wordCount": 372,
+      "wordCount": 396,
       "emoji": "😂",
-      "emojiCount": 790
+      "emojiCount": 854
     },
     "byMonth": [
       {
@@ -1299,91 +1299,91 @@ export const wordEmojiStats = {
       {
         "month": "Feb 2026",
         "word": "damn",
-        "wordCount": 88,
+        "wordCount": 112,
         "emoji": "😂",
-        "emojiCount": 105,
+        "emojiCount": 169,
         "topWords": [
           {
             "key": "damn",
-            "count": 88
-          },
-          {
-            "key": "life",
-            "count": 42
+            "count": 112
           },
           {
             "key": "work",
-            "count": 42
+            "count": 56
           },
           {
             "key": "australia",
-            "count": 38
-          },
-          {
-            "key": "find",
-            "count": 38
+            "count": 55
           },
           {
             "key": "alright",
-            "count": 36
+            "count": 54
+          },
+          {
+            "key": "life",
+            "count": 49
           },
           {
             "key": "case",
-            "count": 36
+            "count": 48
+          },
+          {
+            "key": "find",
+            "count": 47
           },
           {
             "key": "ask",
-            "count": 35
+            "count": 45
           },
           {
-            "key": "russian",
-            "count": 30
+            "key": "honestly",
+            "count": 43
           },
           {
-            "key": "love",
-            "count": 29
+            "key": "usually",
+            "count": 41
           }
         ],
         "topEmojis": [
           {
             "key": "😂",
-            "count": 105
+            "count": 169
           },
           {
             "key": "😅",
-            "count": 69
+            "count": 88
           },
           {
             "key": "😄",
-            "count": 43
-          },
-          {
-            "key": "😁",
-            "count": 35
-          },
-          {
-            "key": "😝",
-            "count": 33
+            "count": 62
           },
           {
             "key": "😊",
-            "count": 31
+            "count": 57
           },
           {
-            "key": "❤",
-            "count": 26
+            "key": "😝",
+            "count": 50
           },
           {
-            "key": "🙈",
-            "count": 26
+            "key": "😁",
+            "count": 45
           },
           {
             "key": "😭",
-            "count": 23
+            "count": 39
+          },
+          {
+            "key": "❤",
+            "count": 36
+          },
+          {
+            "key": "🙈",
+            "count": 28
           },
           {
             "key": "🥺",
-            "count": 16
+            "count": 20
           }
         ]
       }
@@ -1483,13 +1483,13 @@ export const wordEmojiStats = {
       {
         "day": "Monday",
         "word": "love",
-        "wordCount": 62,
+        "wordCount": 63,
         "emoji": "😂",
-        "emojiCount": 142,
+        "emojiCount": 143,
         "topWords": [
           {
             "key": "love",
-            "count": 62
+            "count": 63
           },
           {
             "key": "damn",
@@ -1516,12 +1516,12 @@ export const wordEmojiStats = {
             "count": 38
           },
           {
-            "key": "honestly",
-            "count": 33
+            "key": "hard",
+            "count": 35
           },
           {
-            "key": "hard",
-            "count": 33
+            "key": "honestly",
+            "count": 34
           },
           {
             "key": "russia",
@@ -1531,7 +1531,7 @@ export const wordEmojiStats = {
         "topEmojis": [
           {
             "key": "😂",
-            "count": 142
+            "count": 143
           },
           {
             "key": "😅",
@@ -1543,15 +1543,15 @@ export const wordEmojiStats = {
           },
           {
             "key": "😊",
-            "count": 35
+            "count": 36
+          },
+          {
+            "key": "😁",
+            "count": 26
           },
           {
             "key": "😭",
             "count": 25
-          },
-          {
-            "key": "😁",
-            "count": 23
           },
           {
             "key": "😝",
@@ -1559,7 +1559,7 @@ export const wordEmojiStats = {
           },
           {
             "key": "❤",
-            "count": 14
+            "count": 15
           },
           {
             "key": "🙈",
@@ -1574,24 +1574,32 @@ export const wordEmojiStats = {
       {
         "day": "Tuesday",
         "word": "damn",
-        "wordCount": 64,
+        "wordCount": 69,
         "emoji": "😂",
-        "emojiCount": 98,
+        "emojiCount": 115,
         "topWords": [
           {
             "key": "damn",
-            "count": 64
+            "count": 69
           },
           {
             "key": "find",
-            "count": 38
+            "count": 43
           },
           {
             "key": "https",
-            "count": 36
+            "count": 39
+          },
+          {
+            "key": "work",
+            "count": 34
           },
           {
             "key": "com",
+            "count": 34
+          },
+          {
+            "key": "love",
             "count": 32
           },
           {
@@ -1600,132 +1608,132 @@ export const wordEmojiStats = {
           },
           {
             "key": "parents",
-            "count": 30
+            "count": 31
           },
           {
-            "key": "love",
-            "count": 28
-          },
-          {
-            "key": "work",
+            "key": "mind",
             "count": 27
           },
           {
-            "key": "lisa",
-            "count": 25
-          },
-          {
-            "key": "game",
-            "count": 24
+            "key": "honestly",
+            "count": 26
           }
         ],
         "topEmojis": [
           {
             "key": "😂",
-            "count": 98
+            "count": 115
           },
           {
             "key": "😅",
-            "count": 43
+            "count": 52
           },
           {
             "key": "😄",
-            "count": 37
-          },
-          {
-            "key": "😊",
-            "count": 26
+            "count": 43
           },
           {
             "key": "😭",
-            "count": 24
+            "count": 36
+          },
+          {
+            "key": "😊",
+            "count": 35
           },
           {
             "key": "😝",
-            "count": 16
-          },
-          {
-            "key": "😁",
-            "count": 13
-          },
-          {
-            "key": "🥺",
-            "count": 11
+            "count": 18
           },
           {
             "key": "😤",
-            "count": 11
+            "count": 15
+          },
+          {
+            "key": "😁",
+            "count": 14
+          },
+          {
+            "key": "🥺",
+            "count": 14
           },
           {
             "key": "❤",
-            "count": 9
+            "count": 13
           }
         ]
       },
       {
         "day": "Wednesday",
         "word": "damn",
-        "wordCount": 43,
+        "wordCount": 45,
         "emoji": "😂",
-        "emojiCount": 91,
+        "emojiCount": 101,
         "topWords": [
           {
             "key": "damn",
-            "count": 43
+            "count": 45
+          },
+          {
+            "key": "work",
+            "count": 26
           },
           {
             "key": "app",
             "count": 24
           },
           {
-            "key": "work",
-            "count": 22
+            "key": "ask",
+            "count": 21
           },
           {
             "key": "find",
-            "count": 20
-          },
-          {
-            "key": "ask",
-            "count": 19
+            "count": 21
           },
           {
             "key": "lisa",
+            "count": 20
+          },
+          {
+            "key": "definitely",
             "count": 19
+          },
+          {
+            "key": "wanted",
+            "count": 18
           },
           {
             "key": "english",
             "count": 18
           },
           {
-            "key": "definitely",
+            "key": "honestly",
             "count": 18
-          },
-          {
-            "key": "wanted",
-            "count": 17
-          },
-          {
-            "key": "different",
-            "count": 17
           }
         ],
         "topEmojis": [
           {
             "key": "😂",
-            "count": 91
+            "count": 101
           },
           {
             "key": "😅",
-            "count": 32
-          },
-          {
-            "key": "😄",
-            "count": 26
+            "count": 38
           },
           {
             "key": "😊",
-            "count": 21
+            "count": 29
+          },
+          {
+            "key": "😄",
+            "count": 27
+          },
+          {
+            "key": "😝",
+            "count": 20
+          },
+          {
+            "key": "😁",
+            "count": 16
           },
           {
             "key": "😭",
@@ -1736,103 +1744,95 @@ export const wordEmojiStats = {
             "count": 14
           },
           {
-            "key": "😁",
-            "count": 13
-          },
-          {
-            "key": "😝",
-            "count": 12
-          },
-          {
             "key": "🤗",
-            "count": 5
+            "count": 8
           },
           {
             "key": "❤",
-            "count": 5
+            "count": 7
           }
         ]
       },
       {
         "day": "Thursday",
         "word": "damn",
-        "wordCount": 52,
+        "wordCount": 62,
         "emoji": "😂",
-        "emojiCount": 160,
+        "emojiCount": 179,
         "topWords": [
           {
             "key": "damn",
-            "count": 52
-          },
-          {
-            "key": "find",
-            "count": 44
-          },
-          {
-            "key": "work",
-            "count": 43
+            "count": 62
           },
           {
             "key": "australia",
+            "count": 50
+          },
+          {
+            "key": "find",
+            "count": 47
+          },
+          {
+            "key": "work",
+            "count": 46
+          },
+          {
+            "key": "ask",
             "count": 41
           },
           {
             "key": "love",
-            "count": 38
+            "count": 41
           },
           {
             "key": "life",
-            "count": 37
+            "count": 39
           },
           {
             "key": "years",
-            "count": 37
+            "count": 39
           },
           {
-            "key": "ask",
-            "count": 36
-          },
-          {
-            "key": "year",
-            "count": 35
+            "key": "honestly",
+            "count": 39
           },
           {
             "key": "hard",
-            "count": 35
+            "count": 39
           }
         ],
         "topEmojis": [
           {
             "key": "😂",
-            "count": 160
+            "count": 179
           },
           {
             "key": "😅",
-            "count": 63
+            "count": 66
           },
           {
             "key": "😊",
-            "count": 47
+            "count": 51
           },
           {
             "key": "😁",
-            "count": 40
+            "count": 41
           },
           {
             "key": "😄",
-            "count": 33
-          },
-          {
-            "key": "😭",
-            "count": 23
+            "count": 38
           },
           {
             "key": "😝",
-            "count": 22
+            "count": 25
+          },
+          {
+            "key": "😭",
+            "count": 25
           },
           {
             "key": "❤",
-            "count": 18
+            "count": 19
           },
           {
             "key": "🙈",
@@ -1847,21 +1847,25 @@ export const wordEmojiStats = {
       {
         "day": "Friday",
         "word": "damn",
-        "wordCount": 50,
+        "wordCount": 57,
         "emoji": "😂",
-        "emojiCount": 128,
+        "emojiCount": 145,
         "topWords": [
           {
             "key": "damn",
-            "count": 50
+            "count": 57
           },
           {
             "key": "australia",
-            "count": 34
+            "count": 37
           },
           {
             "key": "life",
-            "count": 33
+            "count": 37
+          },
+          {
+            "key": "honestly",
+            "count": 32
           },
           {
             "key": "photos",
@@ -1869,6 +1873,14 @@ export const wordEmojiStats = {
           },
           {
             "key": "case",
+            "count": 31
+          },
+          {
+            "key": "wanted",
+            "count": 31
+          },
+          {
+            "key": "years",
             "count": 30
           },
           {
@@ -1876,62 +1888,50 @@ export const wordEmojiStats = {
             "count": 30
           },
           {
-            "key": "years",
-            "count": 29
-          },
-          {
-            "key": "wanted",
+            "key": "usually",
             "count": 28
-          },
-          {
-            "key": "honestly",
-            "count": 26
-          },
-          {
-            "key": "different",
-            "count": 26
           }
         ],
         "topEmojis": [
           {
             "key": "😂",
-            "count": 128
+            "count": 145
           },
           {
             "key": "😅",
-            "count": 58
-          },
-          {
-            "key": "😁",
-            "count": 35
-          },
-          {
-            "key": "😊",
-            "count": 32
+            "count": 59
           },
           {
             "key": "😄",
-            "count": 31
+            "count": 38
+          },
+          {
+            "key": "😁",
+            "count": 37
+          },
+          {
+            "key": "😊",
+            "count": 36
           },
           {
             "key": "😭",
-            "count": 24
-          },
-          {
-            "key": "😌",
-            "count": 13
-          },
-          {
-            "key": "❤",
-            "count": 11
+            "count": 26
           },
           {
             "key": "😝",
-            "count": 10
+            "count": 14
+          },
+          {
+            "key": "😌",
+            "count": 14
+          },
+          {
+            "key": "❤",
+            "count": 13
           },
           {
             "key": "🥺",
-            "count": 10
+            "count": 11
           }
         ]
       },
@@ -2030,10 +2030,10 @@ export const wordEmojiStats = {
   },
   "elizabeth": {
     "overall": {
-      "word": "love",
-      "wordCount": 111,
+      "word": "work",
+      "wordCount": 116,
       "emoji": "😁",
-      "emojiCount": 294
+      "emojiCount": 316
     },
     "byMonth": [
       {
@@ -2311,25 +2311,37 @@ export const wordEmojiStats = {
       },
       {
         "month": "Feb 2026",
-        "word": "problems",
-        "wordCount": 32,
+        "word": "work",
+        "wordCount": 42,
         "emoji": "😁",
-        "emojiCount": 48,
+        "emojiCount": 70,
         "topWords": [
           {
-            "key": "problems",
-            "count": 32
+            "key": "work",
+            "count": 42
           },
           {
-            "key": "work",
-            "count": 30
+            "key": "problems",
+            "count": 41
           },
           {
             "key": "food",
-            "count": 27
+            "count": 34
+          },
+          {
+            "key": "understand",
+            "count": 29
           },
           {
             "key": "example",
+            "count": 28
+          },
+          {
+            "key": "eat",
+            "count": 28
+          },
+          {
+            "key": "girl",
             "count": 26
           },
           {
@@ -2338,29 +2350,17 @@ export const wordEmojiStats = {
           },
           {
             "key": "problem",
-            "count": 24
-          },
-          {
-            "key": "understand",
-            "count": 23
-          },
-          {
-            "key": "girl",
-            "count": 22
+            "count": 25
           },
           {
             "key": "ask",
-            "count": 21
-          },
-          {
-            "key": "money",
-            "count": 20
+            "count": 25
           }
         ],
         "topEmojis": [
           {
             "key": "😁",
-            "count": 48
+            "count": 70
           },
           {
             "key": "🙏",
@@ -2371,12 +2371,12 @@ export const wordEmojiStats = {
             "count": 22
           },
           {
-            "key": "😄",
-            "count": 8
+            "key": "❤",
+            "count": 18
           },
           {
-            "key": "❤",
-            "count": 7
+            "key": "😄",
+            "count": 9
           },
           {
             "key": "😅",
@@ -2384,7 +2384,11 @@ export const wordEmojiStats = {
           },
           {
             "key": "😂",
-            "count": 4
+            "count": 5
+          },
+          {
+            "key": "😔",
+            "count": 5
           },
           {
             "key": "🥺",
@@ -2392,10 +2396,6 @@ export const wordEmojiStats = {
           },
           {
             "key": "🥳",
-            "count": 2
-          },
-          {
-            "key": "☹",
             "count": 2
           }
         ]
@@ -2498,7 +2498,7 @@ export const wordEmojiStats = {
         "word": "men",
         "wordCount": 30,
         "emoji": "😁",
-        "emojiCount": 75,
+        "emojiCount": 77,
         "topWords": [
           {
             "key": "men",
@@ -2525,15 +2525,15 @@ export const wordEmojiStats = {
             "count": 23
           },
           {
+            "key": "work",
+            "count": 23
+          },
+          {
             "key": "friend",
             "count": 22
           },
           {
             "key": "example",
-            "count": 22
-          },
-          {
-            "key": "work",
             "count": 22
           },
           {
@@ -2544,7 +2544,7 @@ export const wordEmojiStats = {
         "topEmojis": [
           {
             "key": "😁",
-            "count": 75
+            "count": 77
           },
           {
             "key": "🙏",
@@ -2564,11 +2564,11 @@ export const wordEmojiStats = {
           },
           {
             "key": "😄",
-            "count": 9
+            "count": 10
           },
           {
             "key": "❤",
-            "count": 9
+            "count": 10
           },
           {
             "key": "🙂",
@@ -2586,17 +2586,33 @@ export const wordEmojiStats = {
       },
       {
         "day": "Tuesday",
-        "word": "understand",
-        "wordCount": 19,
+        "word": "work",
+        "wordCount": 25,
         "emoji": "😁",
-        "emojiCount": 21,
+        "emojiCount": 27,
         "topWords": [
           {
+            "key": "work",
+            "count": 25
+          },
+          {
+            "key": "https",
+            "count": 22
+          },
+          {
             "key": "understand",
-            "count": 19
+            "count": 21
+          },
+          {
+            "key": "skin",
+            "count": 21
           },
           {
             "key": "love",
+            "count": 21
+          },
+          {
+            "key": "com",
             "count": 19
           },
           {
@@ -2604,38 +2620,22 @@ export const wordEmojiStats = {
             "count": 19
           },
           {
-            "key": "work",
-            "count": 18
-          },
-          {
-            "key": "https",
-            "count": 18
-          },
-          {
             "key": "send",
             "count": 17
           },
           {
-            "key": "com",
-            "count": 16
-          },
-          {
-            "key": "skin",
+            "key": "man",
             "count": 15
           },
           {
-            "key": "man",
+            "key": "gym",
             "count": 14
-          },
-          {
-            "key": "game",
-            "count": 13
           }
         ],
         "topEmojis": [
           {
             "key": "😁",
-            "count": 21
+            "count": 27
           },
           {
             "key": "😄",
@@ -2658,6 +2658,10 @@ export const wordEmojiStats = {
             "count": 3
           },
           {
+            "key": "😔",
+            "count": 3
+          },
+          {
             "key": "🥺",
             "count": 2
           },
@@ -2668,10 +2672,6 @@ export const wordEmojiStats = {
           {
             "key": "🙂",
             "count": 1
-          },
-          {
-            "key": "🤗",
-            "count": 1
           }
         ]
       },
@@ -2680,7 +2680,7 @@ export const wordEmojiStats = {
         "word": "app",
         "wordCount": 19,
         "emoji": "😁",
-        "emojiCount": 28,
+        "emojiCount": 29,
         "topWords": [
           {
             "key": "app",
@@ -2688,6 +2688,10 @@ export const wordEmojiStats = {
           },
           {
             "key": "life",
+            "count": 17
+          },
+          {
+            "key": "work",
             "count": 16
           },
           {
@@ -2717,16 +2721,16 @@ export const wordEmojiStats = {
           {
             "key": "code",
             "count": 13
-          },
-          {
-            "key": "work",
-            "count": 12
           }
         ],
         "topEmojis": [
           {
             "key": "😁",
-            "count": 28
+            "count": 29
+          },
+          {
+            "key": "❤",
+            "count": 10
           },
           {
             "key": "😄",
@@ -2735,10 +2739,6 @@ export const wordEmojiStats = {
           {
             "key": "🙈",
             "count": 8
-          },
-          {
-            "key": "❤",
-            "count": 6
           },
           {
             "key": "😃",
@@ -2761,37 +2761,37 @@ export const wordEmojiStats = {
             "count": 2
           },
           {
-            "key": "🤗",
-            "count": 1
+            "key": "😔",
+            "count": 2
           }
         ]
       },
       {
         "day": "Thursday",
-        "word": "work",
+        "word": "understand",
         "wordCount": 29,
         "emoji": "😁",
-        "emojiCount": 59,
+        "emojiCount": 68,
         "topWords": [
+          {
+            "key": "understand",
+            "count": 29
+          },
           {
             "key": "work",
             "count": 29
           },
           {
             "key": "love",
-            "count": 27
-          },
-          {
-            "key": "understand",
-            "count": 27
+            "count": 28
           },
           {
             "key": "parents",
-            "count": 25
+            "count": 28
           },
           {
             "key": "usually",
-            "count": 21
+            "count": 22
           },
           {
             "key": "guys",
@@ -2802,22 +2802,22 @@ export const wordEmojiStats = {
             "count": 20
           },
           {
+            "key": "father",
+            "count": 19
+          },
+          {
             "key": "year",
             "count": 19
           },
           {
-            "key": "food",
-            "count": 19
-          },
-          {
-            "key": "days",
+            "key": "problems",
             "count": 19
           }
         ],
         "topEmojis": [
           {
             "key": "😁",
-            "count": 59
+            "count": 68
           },
           {
             "key": "😄",
@@ -2829,7 +2829,7 @@ export const wordEmojiStats = {
           },
           {
             "key": "❤",
-            "count": 8
+            "count": 10
           },
           {
             "key": "😃",
@@ -2844,12 +2844,12 @@ export const wordEmojiStats = {
             "count": 4
           },
           {
-            "key": "😊",
+            "key": "😏",
             "count": 4
           },
           {
-            "key": "😏",
-            "count": 3
+            "key": "😊",
+            "count": 4
           },
           {
             "key": "🙈",
@@ -2862,7 +2862,7 @@ export const wordEmojiStats = {
         "word": "different",
         "wordCount": 25,
         "emoji": "😁",
-        "emojiCount": 52,
+        "emojiCount": 56,
         "topWords": [
           {
             "key": "different",
@@ -2873,8 +2873,16 @@ export const wordEmojiStats = {
             "count": 24
           },
           {
+            "key": "dog",
+            "count": 20
+          },
+          {
             "key": "hair",
             "count": 20
+          },
+          {
+            "key": "gym",
+            "count": 19
           },
           {
             "key": "play",
@@ -2885,30 +2893,22 @@ export const wordEmojiStats = {
             "count": 19
           },
           {
-            "key": "gym",
-            "count": 17
-          },
-          {
-            "key": "dog",
-            "count": 17
-          },
-          {
-            "key": "game",
-            "count": 16
+            "key": "food",
+            "count": 18
           },
           {
             "key": "australia",
-            "count": 15
+            "count": 17
           },
           {
-            "key": "buy",
-            "count": 15
+            "key": "eat",
+            "count": 17
           }
         ],
         "topEmojis": [
           {
             "key": "😁",
-            "count": 52
+            "count": 56
           },
           {
             "key": "😄",
@@ -2916,7 +2916,11 @@ export const wordEmojiStats = {
           },
           {
             "key": "😃",
-            "count": 12
+            "count": 14
+          },
+          {
+            "key": "❤",
+            "count": 8
           },
           {
             "key": "😅",
@@ -2924,11 +2928,7 @@ export const wordEmojiStats = {
           },
           {
             "key": "😔",
-            "count": 4
-          },
-          {
-            "key": "❤",
-            "count": 4
+            "count": 5
           },
           {
             "key": "😏",
@@ -3047,17 +3047,17 @@ export const numericStats = {
   "combined": [
     {
       "label": "Words exchanged",
-      "value": "232,210",
+      "value": "246,798",
       "icon": "💬"
     },
     {
       "label": "Late night messages",
-      "value": "982",
+      "value": "1,024",
       "icon": "🌙"
     },
     {
       "label": "Emojis sent",
-      "value": "3,348",
+      "value": "3,629",
       "icon": "😂"
     },
     {
@@ -3069,17 +3069,17 @@ export const numericStats = {
   "steven": [
     {
       "label": "Words exchanged",
-      "value": "156,780",
+      "value": "167,237",
       "icon": "💬"
     },
     {
       "label": "Late night messages",
-      "value": "583",
+      "value": "608",
       "icon": "🌙"
     },
     {
       "label": "Emojis sent",
-      "value": "2,611",
+      "value": "2,846",
       "icon": "😂"
     },
     {
@@ -3091,17 +3091,17 @@ export const numericStats = {
   "elizabeth": [
     {
       "label": "Words exchanged",
-      "value": "75,430",
+      "value": "79,561",
       "icon": "💬"
     },
     {
       "label": "Late night messages",
-      "value": "399",
+      "value": "416",
       "icon": "🌙"
     },
     {
       "label": "Emojis sent",
-      "value": "737",
+      "value": "783",
       "icon": "😂"
     },
     {
@@ -3114,7 +3114,7 @@ export const numericStats = {
 
 export const messagingStatsData = {
   "combined": {
-    "totalMessages": 11868,
+    "totalMessages": 12917,
     "heatmapData": [
       {
         "hour": 0,
@@ -3314,12 +3314,12 @@ export const messagingStatsData = {
       {
         "hour": 22,
         "day": 1,
-        "count": 372
+        "count": 397
       },
       {
         "hour": 23,
         "day": 1,
-        "count": 220
+        "count": 241
       },
       {
         "hour": 0,
@@ -3339,22 +3339,32 @@ export const messagingStatsData = {
       {
         "hour": 6,
         "day": 2,
-        "count": 2
+        "count": 3
+      },
+      {
+        "hour": 9,
+        "day": 2,
+        "count": 12
       },
       {
         "hour": 10,
         "day": 2,
-        "count": 7
+        "count": 15
       },
       {
         "hour": 11,
         "day": 2,
-        "count": 2
+        "count": 68
+      },
+      {
+        "hour": 12,
+        "day": 2,
+        "count": 6
       },
       {
         "hour": 13,
         "day": 2,
-        "count": 16
+        "count": 18
       },
       {
         "hour": 14,
@@ -3374,42 +3384,42 @@ export const messagingStatsData = {
       {
         "hour": 17,
         "day": 2,
-        "count": 145
+        "count": 164
       },
       {
         "hour": 18,
         "day": 2,
-        "count": 195
+        "count": 244
       },
       {
         "hour": 19,
         "day": 2,
-        "count": 119
+        "count": 172
       },
       {
         "hour": 20,
         "day": 2,
-        "count": 97
+        "count": 99
       },
       {
         "hour": 21,
         "day": 2,
-        "count": 141
+        "count": 144
       },
       {
         "hour": 22,
         "day": 2,
-        "count": 220
+        "count": 294
       },
       {
         "hour": 23,
         "day": 2,
-        "count": 176
+        "count": 285
       },
       {
         "hour": 0,
         "day": 3,
-        "count": 22
+        "count": 61
       },
       {
         "hour": 1,
@@ -3444,12 +3454,12 @@ export const messagingStatsData = {
       {
         "hour": 9,
         "day": 3,
-        "count": 4
+        "count": 9
       },
       {
         "hour": 11,
         "day": 3,
-        "count": 9
+        "count": 10
       },
       {
         "hour": 12,
@@ -3459,37 +3469,37 @@ export const messagingStatsData = {
       {
         "hour": 13,
         "day": 3,
-        "count": 38
+        "count": 39
       },
       {
         "hour": 14,
         "day": 3,
-        "count": 63
+        "count": 74
       },
       {
         "hour": 15,
         "day": 3,
-        "count": 151
+        "count": 188
       },
       {
         "hour": 16,
         "day": 3,
-        "count": 92
+        "count": 141
       },
       {
         "hour": 17,
         "day": 3,
-        "count": 16
+        "count": 17
       },
       {
         "hour": 18,
         "day": 3,
-        "count": 70
+        "count": 89
       },
       {
         "hour": 19,
         "day": 3,
-        "count": 62
+        "count": 69
       },
       {
         "hour": 20,
@@ -3499,12 +3509,12 @@ export const messagingStatsData = {
       {
         "hour": 21,
         "day": 3,
-        "count": 157
+        "count": 198
       },
       {
         "hour": 22,
         "day": 3,
-        "count": 261
+        "count": 266
       },
       {
         "hour": 23,
@@ -3559,7 +3569,7 @@ export const messagingStatsData = {
       {
         "hour": 11,
         "day": 4,
-        "count": 26
+        "count": 29
       },
       {
         "hour": 12,
@@ -3574,57 +3584,57 @@ export const messagingStatsData = {
       {
         "hour": 14,
         "day": 4,
-        "count": 106
+        "count": 134
       },
       {
         "hour": 15,
         "day": 4,
-        "count": 179
+        "count": 248
       },
       {
         "hour": 16,
         "day": 4,
-        "count": 107
+        "count": 129
       },
       {
         "hour": 17,
         "day": 4,
-        "count": 69
+        "count": 75
       },
       {
         "hour": 18,
         "day": 4,
-        "count": 181
+        "count": 189
       },
       {
         "hour": 19,
         "day": 4,
-        "count": 39
+        "count": 44
       },
       {
         "hour": 20,
         "day": 4,
-        "count": 155
+        "count": 169
       },
       {
         "hour": 21,
         "day": 4,
-        "count": 250
+        "count": 308
       },
       {
         "hour": 22,
         "day": 4,
-        "count": 256
+        "count": 257
       },
       {
         "hour": 23,
         "day": 4,
-        "count": 248
+        "count": 251
       },
       {
         "hour": 0,
         "day": 5,
-        "count": 183
+        "count": 186
       },
       {
         "hour": 1,
@@ -3644,7 +3654,7 @@ export const messagingStatsData = {
       {
         "hour": 6,
         "day": 5,
-        "count": 6
+        "count": 7
       },
       {
         "hour": 8,
@@ -3664,7 +3674,7 @@ export const messagingStatsData = {
       {
         "hour": 11,
         "day": 5,
-        "count": 19
+        "count": 21
       },
       {
         "hour": 12,
@@ -3679,12 +3689,12 @@ export const messagingStatsData = {
       {
         "hour": 14,
         "day": 5,
-        "count": 165
+        "count": 209
       },
       {
         "hour": 15,
         "day": 5,
-        "count": 166
+        "count": 185
       },
       {
         "hour": 16,
@@ -3694,32 +3704,32 @@ export const messagingStatsData = {
       {
         "hour": 17,
         "day": 5,
-        "count": 176
+        "count": 203
       },
       {
         "hour": 18,
         "day": 5,
-        "count": 91
+        "count": 98
       },
       {
         "hour": 19,
         "day": 5,
-        "count": 111
+        "count": 116
       },
       {
         "hour": 20,
         "day": 5,
-        "count": 232
+        "count": 241
       },
       {
         "hour": 21,
         "day": 5,
-        "count": 186
+        "count": 231
       },
       {
         "hour": 22,
         "day": 5,
-        "count": 191
+        "count": 195
       },
       {
         "hour": 23,
@@ -3834,7 +3844,7 @@ export const messagingStatsData = {
     ]
   },
   "steven": {
-    "totalMessages": 6941,
+    "totalMessages": 7586,
     "heatmapData": [
       {
         "hour": 0,
@@ -3999,12 +4009,12 @@ export const messagingStatsData = {
       {
         "hour": 22,
         "day": 1,
-        "count": 219
+        "count": 235
       },
       {
         "hour": 23,
         "day": 1,
-        "count": 133
+        "count": 147
       },
       {
         "hour": 0,
@@ -4017,19 +4027,29 @@ export const messagingStatsData = {
         "count": 1
       },
       {
+        "hour": 9,
+        "day": 2,
+        "count": 9
+      },
+      {
         "hour": 10,
         "day": 2,
-        "count": 7
+        "count": 11
       },
       {
         "hour": 11,
+        "day": 2,
+        "count": 41
+      },
+      {
+        "hour": 12,
         "day": 2,
         "count": 2
       },
       {
         "hour": 13,
         "day": 2,
-        "count": 10
+        "count": 12
       },
       {
         "hour": 14,
@@ -4049,52 +4069,52 @@ export const messagingStatsData = {
       {
         "hour": 17,
         "day": 2,
-        "count": 92
+        "count": 105
       },
       {
         "hour": 18,
         "day": 2,
-        "count": 103
+        "count": 129
       },
       {
         "hour": 19,
         "day": 2,
-        "count": 71
+        "count": 105
       },
       {
         "hour": 20,
         "day": 2,
-        "count": 53
+        "count": 55
       },
       {
         "hour": 21,
         "day": 2,
-        "count": 85
+        "count": 87
       },
       {
         "hour": 22,
         "day": 2,
-        "count": 128
+        "count": 173
       },
       {
         "hour": 23,
         "day": 2,
-        "count": 109
+        "count": 175
       },
       {
         "hour": 0,
         "day": 3,
-        "count": 12
+        "count": 35
       },
       {
         "hour": 9,
         "day": 3,
-        "count": 4
+        "count": 9
       },
       {
         "hour": 11,
         "day": 3,
-        "count": 9
+        "count": 10
       },
       {
         "hour": 12,
@@ -4104,37 +4124,37 @@ export const messagingStatsData = {
       {
         "hour": 13,
         "day": 3,
-        "count": 22
+        "count": 23
       },
       {
         "hour": 14,
         "day": 3,
-        "count": 41
+        "count": 46
       },
       {
         "hour": 15,
         "day": 3,
-        "count": 91
+        "count": 114
       },
       {
         "hour": 16,
         "day": 3,
-        "count": 51
+        "count": 80
       },
       {
         "hour": 17,
         "day": 3,
-        "count": 11
+        "count": 12
       },
       {
         "hour": 18,
         "day": 3,
-        "count": 38
+        "count": 51
       },
       {
         "hour": 19,
         "day": 3,
-        "count": 37
+        "count": 41
       },
       {
         "hour": 20,
@@ -4144,12 +4164,12 @@ export const messagingStatsData = {
       {
         "hour": 21,
         "day": 3,
-        "count": 91
+        "count": 120
       },
       {
         "hour": 22,
         "day": 3,
-        "count": 164
+        "count": 167
       },
       {
         "hour": 23,
@@ -4179,7 +4199,7 @@ export const messagingStatsData = {
       {
         "hour": 11,
         "day": 4,
-        "count": 22
+        "count": 25
       },
       {
         "hour": 12,
@@ -4194,42 +4214,42 @@ export const messagingStatsData = {
       {
         "hour": 14,
         "day": 4,
-        "count": 64
+        "count": 81
       },
       {
         "hour": 15,
         "day": 4,
-        "count": 100
+        "count": 137
       },
       {
         "hour": 16,
         "day": 4,
-        "count": 60
+        "count": 73
       },
       {
         "hour": 17,
         "day": 4,
-        "count": 37
+        "count": 40
       },
       {
         "hour": 18,
         "day": 4,
-        "count": 102
+        "count": 108
       },
       {
         "hour": 19,
         "day": 4,
-        "count": 20
+        "count": 24
       },
       {
         "hour": 20,
         "day": 4,
-        "count": 93
+        "count": 99
       },
       {
         "hour": 21,
         "day": 4,
-        "count": 150
+        "count": 192
       },
       {
         "hour": 22,
@@ -4239,12 +4259,12 @@ export const messagingStatsData = {
       {
         "hour": 23,
         "day": 4,
-        "count": 143
+        "count": 145
       },
       {
         "hour": 0,
         "day": 5,
-        "count": 111
+        "count": 113
       },
       {
         "hour": 1,
@@ -4274,7 +4294,7 @@ export const messagingStatsData = {
       {
         "hour": 11,
         "day": 5,
-        "count": 14
+        "count": 16
       },
       {
         "hour": 12,
@@ -4289,12 +4309,12 @@ export const messagingStatsData = {
       {
         "hour": 14,
         "day": 5,
-        "count": 91
+        "count": 117
       },
       {
         "hour": 15,
         "day": 5,
-        "count": 90
+        "count": 102
       },
       {
         "hour": 16,
@@ -4304,32 +4324,32 @@ export const messagingStatsData = {
       {
         "hour": 17,
         "day": 5,
-        "count": 100
+        "count": 115
       },
       {
         "hour": 18,
         "day": 5,
-        "count": 51
+        "count": 54
       },
       {
         "hour": 19,
         "day": 5,
-        "count": 70
+        "count": 74
       },
       {
         "hour": 20,
         "day": 5,
-        "count": 134
+        "count": 140
       },
       {
         "hour": 21,
         "day": 5,
-        "count": 112
+        "count": 139
       },
       {
         "hour": 22,
         "day": 5,
-        "count": 113
+        "count": 117
       },
       {
         "hour": 23,
@@ -4429,7 +4449,7 @@ export const messagingStatsData = {
     ]
   },
   "elizabeth": {
-    "totalMessages": 4927,
+    "totalMessages": 5331,
     "heatmapData": [
       {
         "hour": 0,
@@ -4589,12 +4609,12 @@ export const messagingStatsData = {
       {
         "hour": 22,
         "day": 1,
-        "count": 153
+        "count": 162
       },
       {
         "hour": 23,
         "day": 1,
-        "count": 87
+        "count": 94
       },
       {
         "hour": 0,
@@ -4614,7 +4634,27 @@ export const messagingStatsData = {
       {
         "hour": 6,
         "day": 2,
-        "count": 1
+        "count": 2
+      },
+      {
+        "hour": 9,
+        "day": 2,
+        "count": 3
+      },
+      {
+        "hour": 10,
+        "day": 2,
+        "count": 4
+      },
+      {
+        "hour": 11,
+        "day": 2,
+        "count": 27
+      },
+      {
+        "hour": 12,
+        "day": 2,
+        "count": 4
       },
       {
         "hour": 13,
@@ -4639,17 +4679,17 @@ export const messagingStatsData = {
       {
         "hour": 17,
         "day": 2,
-        "count": 53
+        "count": 59
       },
       {
         "hour": 18,
         "day": 2,
-        "count": 92
+        "count": 115
       },
       {
         "hour": 19,
         "day": 2,
-        "count": 48
+        "count": 67
       },
       {
         "hour": 20,
@@ -4659,22 +4699,22 @@ export const messagingStatsData = {
       {
         "hour": 21,
         "day": 2,
-        "count": 56
+        "count": 57
       },
       {
         "hour": 22,
         "day": 2,
-        "count": 92
+        "count": 121
       },
       {
         "hour": 23,
         "day": 2,
-        "count": 67
+        "count": 110
       },
       {
         "hour": 0,
         "day": 3,
-        "count": 10
+        "count": 26
       },
       {
         "hour": 1,
@@ -4719,17 +4759,17 @@ export const messagingStatsData = {
       {
         "hour": 14,
         "day": 3,
-        "count": 22
+        "count": 28
       },
       {
         "hour": 15,
         "day": 3,
-        "count": 60
+        "count": 74
       },
       {
         "hour": 16,
         "day": 3,
-        "count": 41
+        "count": 61
       },
       {
         "hour": 17,
@@ -4739,12 +4779,12 @@ export const messagingStatsData = {
       {
         "hour": 18,
         "day": 3,
-        "count": 32
+        "count": 38
       },
       {
         "hour": 19,
         "day": 3,
-        "count": 25
+        "count": 28
       },
       {
         "hour": 20,
@@ -4754,12 +4794,12 @@ export const messagingStatsData = {
       {
         "hour": 21,
         "day": 3,
-        "count": 66
+        "count": 78
       },
       {
         "hour": 22,
         "day": 3,
-        "count": 97
+        "count": 99
       },
       {
         "hour": 23,
@@ -4829,57 +4869,57 @@ export const messagingStatsData = {
       {
         "hour": 14,
         "day": 4,
-        "count": 42
+        "count": 53
       },
       {
         "hour": 15,
         "day": 4,
-        "count": 79
+        "count": 111
       },
       {
         "hour": 16,
         "day": 4,
-        "count": 47
+        "count": 56
       },
       {
         "hour": 17,
         "day": 4,
-        "count": 32
+        "count": 35
       },
       {
         "hour": 18,
         "day": 4,
-        "count": 79
+        "count": 81
       },
       {
         "hour": 19,
         "day": 4,
-        "count": 19
+        "count": 20
       },
       {
         "hour": 20,
         "day": 4,
-        "count": 62
+        "count": 70
       },
       {
         "hour": 21,
         "day": 4,
-        "count": 100
+        "count": 116
       },
       {
         "hour": 22,
         "day": 4,
-        "count": 110
+        "count": 111
       },
       {
         "hour": 23,
         "day": 4,
-        "count": 105
+        "count": 106
       },
       {
         "hour": 0,
         "day": 5,
-        "count": 72
+        "count": 73
       },
       {
         "hour": 1,
@@ -4899,7 +4939,7 @@ export const messagingStatsData = {
       {
         "hour": 6,
         "day": 5,
-        "count": 1
+        "count": 2
       },
       {
         "hour": 11,
@@ -4909,12 +4949,12 @@ export const messagingStatsData = {
       {
         "hour": 14,
         "day": 5,
-        "count": 74
+        "count": 92
       },
       {
         "hour": 15,
         "day": 5,
-        "count": 76
+        "count": 83
       },
       {
         "hour": 16,
@@ -4924,27 +4964,27 @@ export const messagingStatsData = {
       {
         "hour": 17,
         "day": 5,
-        "count": 76
+        "count": 88
       },
       {
         "hour": 18,
         "day": 5,
-        "count": 40
+        "count": 44
       },
       {
         "hour": 19,
         "day": 5,
-        "count": 41
+        "count": 42
       },
       {
         "hour": 20,
         "day": 5,
-        "count": 98
+        "count": 101
       },
       {
         "hour": 21,
         "day": 5,
-        "count": 74
+        "count": 92
       },
       {
         "hour": 22,
@@ -5037,6 +5077,510 @@ export const messagingStatsData = {
         "count": 60
       }
     ]
+  }
+}
+
+export const dailyCalendarData = {
+  "combined": {
+    "2025-11-19": 22,
+    "2025-11-20": 148,
+    "2025-11-21": 145,
+    "2025-11-22": 67,
+    "2025-11-23": 82,
+    "2025-11-24": 112,
+    "2025-11-25": 79,
+    "2025-11-26": 53,
+    "2025-11-27": 171,
+    "2025-11-28": 15,
+    "2025-11-29": 5,
+    "2025-11-30": 1,
+    "2025-12-06": 17,
+    "2025-12-07": 44,
+    "2025-12-08": 106,
+    "2025-12-09": 107,
+    "2025-12-10": 41,
+    "2025-12-11": 62,
+    "2025-12-12": 16,
+    "2025-12-13": 18,
+    "2025-12-14": 19,
+    "2025-12-15": 86,
+    "2025-12-16": 2,
+    "2025-12-17": 15,
+    "2025-12-18": 60,
+    "2025-12-19": 160,
+    "2025-12-20": 12,
+    "2025-12-21": 73,
+    "2025-12-22": 161,
+    "2025-12-23": 54,
+    "2025-12-24": 2,
+    "2025-12-25": 193,
+    "2025-12-26": 127,
+    "2025-12-27": 87,
+    "2025-12-28": 72,
+    "2025-12-29": 149,
+    "2025-12-30": 112,
+    "2025-12-31": 167,
+    "2026-01-01": 254,
+    "2026-01-02": 321,
+    "2026-01-03": 195,
+    "2026-01-04": 86,
+    "2026-01-05": 213,
+    "2026-01-06": 234,
+    "2026-01-07": 74,
+    "2026-01-08": 207,
+    "2026-01-09": 133,
+    "2026-01-10": 361,
+    "2026-01-11": 295,
+    "2026-01-12": 342,
+    "2026-01-13": 140,
+    "2026-01-14": 76,
+    "2026-01-15": 261,
+    "2026-01-16": 171,
+    "2026-01-17": 164,
+    "2026-01-18": 103,
+    "2026-01-19": 263,
+    "2026-01-20": 229,
+    "2026-01-21": 84,
+    "2026-01-22": 231,
+    "2026-01-23": 329,
+    "2026-01-24": 142,
+    "2026-01-25": 152,
+    "2026-01-26": 196,
+    "2026-01-27": 287,
+    "2026-01-28": 398,
+    "2026-01-29": 120,
+    "2026-01-30": 143,
+    "2026-01-31": 117,
+    "2026-02-01": 156,
+    "2026-02-02": 495,
+    "2026-02-03": 418,
+    "2026-02-04": 276,
+    "2026-02-05": 238,
+    "2026-02-06": 368,
+    "2026-02-07": 216,
+    "2026-02-08": 221,
+    "2026-02-09": 343,
+    "2026-02-10": 404,
+    "2026-02-11": 216,
+    "2026-02-12": 217,
+    "2026-02-13": 166
+  },
+  "steven": {
+    "2025-11-19": 12,
+    "2025-11-20": 96,
+    "2025-11-21": 78,
+    "2025-11-22": 39,
+    "2025-11-23": 41,
+    "2025-11-24": 63,
+    "2025-11-25": 44,
+    "2025-11-26": 30,
+    "2025-11-27": 95,
+    "2025-11-28": 10,
+    "2025-11-29": 3,
+    "2025-12-06": 8,
+    "2025-12-07": 26,
+    "2025-12-08": 61,
+    "2025-12-09": 63,
+    "2025-12-10": 23,
+    "2025-12-11": 34,
+    "2025-12-12": 10,
+    "2025-12-13": 12,
+    "2025-12-14": 11,
+    "2025-12-15": 47,
+    "2025-12-16": 1,
+    "2025-12-17": 8,
+    "2025-12-18": 31,
+    "2025-12-19": 92,
+    "2025-12-20": 8,
+    "2025-12-21": 43,
+    "2025-12-22": 90,
+    "2025-12-23": 30,
+    "2025-12-24": 2,
+    "2025-12-25": 112,
+    "2025-12-26": 73,
+    "2025-12-27": 47,
+    "2025-12-28": 43,
+    "2025-12-29": 86,
+    "2025-12-30": 65,
+    "2025-12-31": 98,
+    "2026-01-01": 140,
+    "2026-01-02": 196,
+    "2026-01-03": 117,
+    "2026-01-04": 48,
+    "2026-01-05": 124,
+    "2026-01-06": 140,
+    "2026-01-07": 37,
+    "2026-01-08": 117,
+    "2026-01-09": 79,
+    "2026-01-10": 213,
+    "2026-01-11": 185,
+    "2026-01-12": 199,
+    "2026-01-13": 86,
+    "2026-01-14": 39,
+    "2026-01-15": 155,
+    "2026-01-16": 104,
+    "2026-01-17": 96,
+    "2026-01-18": 54,
+    "2026-01-19": 152,
+    "2026-01-20": 135,
+    "2026-01-21": 49,
+    "2026-01-22": 139,
+    "2026-01-23": 185,
+    "2026-01-24": 89,
+    "2026-01-25": 93,
+    "2026-01-26": 119,
+    "2026-01-27": 176,
+    "2026-01-28": 247,
+    "2026-01-29": 68,
+    "2026-01-30": 93,
+    "2026-01-31": 70,
+    "2026-02-01": 93,
+    "2026-02-02": 287,
+    "2026-02-03": 231,
+    "2026-02-04": 169,
+    "2026-02-05": 137,
+    "2026-02-06": 215,
+    "2026-02-07": 131,
+    "2026-02-08": 126,
+    "2026-02-09": 203,
+    "2026-02-10": 244,
+    "2026-02-11": 137,
+    "2026-02-12": 133,
+    "2026-02-13": 101
+  },
+  "elizabeth": {
+    "2025-11-19": 10,
+    "2025-11-20": 52,
+    "2025-11-21": 67,
+    "2025-11-22": 28,
+    "2025-11-23": 41,
+    "2025-11-24": 49,
+    "2025-11-25": 35,
+    "2025-11-26": 23,
+    "2025-11-27": 76,
+    "2025-11-28": 5,
+    "2025-11-29": 2,
+    "2025-11-30": 1,
+    "2025-12-06": 9,
+    "2025-12-07": 18,
+    "2025-12-08": 45,
+    "2025-12-09": 44,
+    "2025-12-10": 18,
+    "2025-12-11": 28,
+    "2025-12-12": 6,
+    "2025-12-13": 6,
+    "2025-12-14": 8,
+    "2025-12-15": 39,
+    "2025-12-16": 1,
+    "2025-12-17": 7,
+    "2025-12-18": 29,
+    "2025-12-19": 68,
+    "2025-12-20": 4,
+    "2025-12-21": 30,
+    "2025-12-22": 71,
+    "2025-12-23": 24,
+    "2025-12-25": 81,
+    "2025-12-26": 54,
+    "2025-12-27": 40,
+    "2025-12-28": 29,
+    "2025-12-29": 63,
+    "2025-12-30": 47,
+    "2025-12-31": 69,
+    "2026-01-01": 114,
+    "2026-01-02": 125,
+    "2026-01-03": 78,
+    "2026-01-04": 38,
+    "2026-01-05": 89,
+    "2026-01-06": 94,
+    "2026-01-07": 37,
+    "2026-01-08": 90,
+    "2026-01-09": 54,
+    "2026-01-10": 148,
+    "2026-01-11": 110,
+    "2026-01-12": 143,
+    "2026-01-13": 54,
+    "2026-01-14": 37,
+    "2026-01-15": 106,
+    "2026-01-16": 67,
+    "2026-01-17": 68,
+    "2026-01-18": 49,
+    "2026-01-19": 111,
+    "2026-01-20": 94,
+    "2026-01-21": 35,
+    "2026-01-22": 92,
+    "2026-01-23": 144,
+    "2026-01-24": 53,
+    "2026-01-25": 59,
+    "2026-01-26": 77,
+    "2026-01-27": 111,
+    "2026-01-28": 151,
+    "2026-01-29": 52,
+    "2026-01-30": 50,
+    "2026-01-31": 47,
+    "2026-02-01": 63,
+    "2026-02-02": 208,
+    "2026-02-03": 187,
+    "2026-02-04": 107,
+    "2026-02-05": 101,
+    "2026-02-06": 153,
+    "2026-02-07": 85,
+    "2026-02-08": 95,
+    "2026-02-09": 140,
+    "2026-02-10": 160,
+    "2026-02-11": 79,
+    "2026-02-12": 84,
+    "2026-02-13": 65
+  }
+}
+
+export const dailyCalendarDataMsk = {
+  "combined": {
+    "2025-11-19": 22,
+    "2025-11-20": 148,
+    "2025-11-21": 146,
+    "2025-11-22": 76,
+    "2025-11-23": 75,
+    "2025-11-24": 112,
+    "2025-11-25": 81,
+    "2025-11-26": 75,
+    "2025-11-27": 144,
+    "2025-11-28": 17,
+    "2025-11-29": 4,
+    "2025-12-06": 24,
+    "2025-12-07": 39,
+    "2025-12-08": 106,
+    "2025-12-09": 105,
+    "2025-12-10": 43,
+    "2025-12-11": 71,
+    "2025-12-12": 5,
+    "2025-12-13": 18,
+    "2025-12-14": 22,
+    "2025-12-15": 83,
+    "2025-12-16": 16,
+    "2025-12-17": 3,
+    "2025-12-18": 63,
+    "2025-12-19": 156,
+    "2025-12-20": 63,
+    "2025-12-21": 23,
+    "2025-12-22": 160,
+    "2025-12-23": 53,
+    "2025-12-24": 11,
+    "2025-12-25": 184,
+    "2025-12-26": 131,
+    "2025-12-27": 88,
+    "2025-12-28": 92,
+    "2025-12-29": 124,
+    "2025-12-30": 115,
+    "2025-12-31": 184,
+    "2026-01-01": 264,
+    "2026-01-02": 325,
+    "2026-01-03": 168,
+    "2026-01-04": 105,
+    "2026-01-05": 187,
+    "2026-01-06": 243,
+    "2026-01-07": 91,
+    "2026-01-08": 181,
+    "2026-01-09": 136,
+    "2026-01-10": 433,
+    "2026-01-11": 257,
+    "2026-01-12": 310,
+    "2026-01-13": 141,
+    "2026-01-14": 70,
+    "2026-01-15": 268,
+    "2026-01-16": 165,
+    "2026-01-17": 189,
+    "2026-01-18": 89,
+    "2026-01-19": 252,
+    "2026-01-20": 228,
+    "2026-01-21": 84,
+    "2026-01-22": 290,
+    "2026-01-23": 315,
+    "2026-01-24": 135,
+    "2026-01-25": 143,
+    "2026-01-26": 167,
+    "2026-01-27": 288,
+    "2026-01-28": 404,
+    "2026-01-29": 130,
+    "2026-01-30": 126,
+    "2026-01-31": 159,
+    "2026-02-01": 114,
+    "2026-02-02": 496,
+    "2026-02-03": 420,
+    "2026-02-04": 317,
+    "2026-02-05": 262,
+    "2026-02-06": 446,
+    "2026-02-07": 86,
+    "2026-02-08": 210,
+    "2026-02-09": 339,
+    "2026-02-10": 442,
+    "2026-02-11": 177,
+    "2026-02-12": 221,
+    "2026-02-13": 162
+  },
+  "steven": {
+    "2025-11-19": 12,
+    "2025-11-20": 96,
+    "2025-11-21": 78,
+    "2025-11-22": 39,
+    "2025-11-23": 41,
+    "2025-11-24": 64,
+    "2025-11-25": 43,
+    "2025-11-26": 43,
+    "2025-11-27": 82,
+    "2025-11-28": 10,
+    "2025-11-29": 3,
+    "2025-12-06": 13,
+    "2025-12-07": 21,
+    "2025-12-08": 61,
+    "2025-12-09": 63,
+    "2025-12-10": 23,
+    "2025-12-11": 40,
+    "2025-12-12": 4,
+    "2025-12-13": 12,
+    "2025-12-14": 11,
+    "2025-12-15": 47,
+    "2025-12-16": 9,
+    "2025-12-18": 35,
+    "2025-12-19": 88,
+    "2025-12-20": 38,
+    "2025-12-21": 14,
+    "2025-12-22": 89,
+    "2025-12-23": 30,
+    "2025-12-24": 7,
+    "2025-12-25": 107,
+    "2025-12-26": 75,
+    "2025-12-27": 48,
+    "2025-12-28": 53,
+    "2025-12-29": 73,
+    "2025-12-30": 68,
+    "2025-12-31": 105,
+    "2026-01-01": 145,
+    "2026-01-02": 203,
+    "2026-01-03": 100,
+    "2026-01-04": 60,
+    "2026-01-05": 107,
+    "2026-01-06": 140,
+    "2026-01-07": 53,
+    "2026-01-08": 101,
+    "2026-01-09": 80,
+    "2026-01-10": 263,
+    "2026-01-11": 155,
+    "2026-01-12": 181,
+    "2026-01-13": 84,
+    "2026-01-14": 38,
+    "2026-01-15": 160,
+    "2026-01-16": 99,
+    "2026-01-17": 108,
+    "2026-01-18": 48,
+    "2026-01-19": 146,
+    "2026-01-20": 135,
+    "2026-01-21": 49,
+    "2026-01-22": 173,
+    "2026-01-23": 178,
+    "2026-01-24": 86,
+    "2026-01-25": 89,
+    "2026-01-26": 99,
+    "2026-01-27": 176,
+    "2026-01-28": 250,
+    "2026-01-29": 77,
+    "2026-01-30": 81,
+    "2026-01-31": 97,
+    "2026-02-01": 66,
+    "2026-02-02": 287,
+    "2026-02-03": 231,
+    "2026-02-04": 197,
+    "2026-02-05": 152,
+    "2026-02-06": 265,
+    "2026-02-07": 45,
+    "2026-02-08": 119,
+    "2026-02-09": 203,
+    "2026-02-10": 267,
+    "2026-02-11": 114,
+    "2026-02-12": 135,
+    "2026-02-13": 99
+  },
+  "elizabeth": {
+    "2025-11-19": 10,
+    "2025-11-20": 52,
+    "2025-11-21": 68,
+    "2025-11-22": 37,
+    "2025-11-23": 34,
+    "2025-11-24": 48,
+    "2025-11-25": 38,
+    "2025-11-26": 32,
+    "2025-11-27": 62,
+    "2025-11-28": 7,
+    "2025-11-29": 1,
+    "2025-12-06": 11,
+    "2025-12-07": 18,
+    "2025-12-08": 45,
+    "2025-12-09": 42,
+    "2025-12-10": 20,
+    "2025-12-11": 31,
+    "2025-12-12": 1,
+    "2025-12-13": 6,
+    "2025-12-14": 11,
+    "2025-12-15": 36,
+    "2025-12-16": 7,
+    "2025-12-17": 3,
+    "2025-12-18": 28,
+    "2025-12-19": 68,
+    "2025-12-20": 25,
+    "2025-12-21": 9,
+    "2025-12-22": 71,
+    "2025-12-23": 23,
+    "2025-12-24": 4,
+    "2025-12-25": 77,
+    "2025-12-26": 56,
+    "2025-12-27": 40,
+    "2025-12-28": 39,
+    "2025-12-29": 51,
+    "2025-12-30": 47,
+    "2025-12-31": 79,
+    "2026-01-01": 119,
+    "2026-01-02": 122,
+    "2026-01-03": 68,
+    "2026-01-04": 45,
+    "2026-01-05": 80,
+    "2026-01-06": 103,
+    "2026-01-07": 38,
+    "2026-01-08": 80,
+    "2026-01-09": 56,
+    "2026-01-10": 170,
+    "2026-01-11": 102,
+    "2026-01-12": 129,
+    "2026-01-13": 57,
+    "2026-01-14": 32,
+    "2026-01-15": 108,
+    "2026-01-16": 66,
+    "2026-01-17": 81,
+    "2026-01-18": 41,
+    "2026-01-19": 106,
+    "2026-01-20": 93,
+    "2026-01-21": 35,
+    "2026-01-22": 117,
+    "2026-01-23": 137,
+    "2026-01-24": 49,
+    "2026-01-25": 54,
+    "2026-01-26": 68,
+    "2026-01-27": 112,
+    "2026-01-28": 154,
+    "2026-01-29": 53,
+    "2026-01-30": 45,
+    "2026-01-31": 62,
+    "2026-02-01": 48,
+    "2026-02-02": 209,
+    "2026-02-03": 189,
+    "2026-02-04": 120,
+    "2026-02-05": 110,
+    "2026-02-06": 181,
+    "2026-02-07": 41,
+    "2026-02-08": 91,
+    "2026-02-09": 136,
+    "2026-02-10": 175,
+    "2026-02-11": 63,
+    "2026-02-12": 86,
+    "2026-02-13": 63
   }
 }
 

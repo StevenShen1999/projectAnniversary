@@ -1,43 +1,11 @@
 <script setup>
-import { ref, watch, onMounted, computed } from 'vue'
-import { messagingStatsData } from '../../data/word-emoji-stats'
+import { ref, computed } from 'vue'
+import { messagingStatsData, dailyCalendarData, dailyCalendarDataMsk } from '../../data/word-emoji-stats'
 
 const person = ref('combined') // 'combined', 'steven', 'elizabeth'
 const perspective = ref('his') // 'his' = AEDT (UTC+11), 'hers' = Saint Petersburg (UTC+3)
 
 const activeMessaging = computed(() => messagingStatsData[person.value])
-
-const animatedValue = ref(0)
-let animationFrame = null
-
-function animateToTarget(target) {
-  if (animationFrame) cancelAnimationFrame(animationFrame)
-  const start = Date.now()
-  const startVal = animatedValue.value
-  const duration = 1200
-
-  const animate = () => {
-    const elapsed = Date.now() - start
-    const progress = Math.min(elapsed / duration, 1)
-    const eased = 1 - Math.pow(1 - progress, 3)
-    animatedValue.value = Math.floor(startVal + (target - startVal) * eased)
-
-    if (progress < 1) {
-      animationFrame = requestAnimationFrame(animate)
-    }
-  }
-
-  animate()
-}
-
-onMounted(() => {
-  animateToTarget(activeMessaging.value.totalMessages)
-})
-
-// Re-animate when person changes
-watch(person, () => {
-  animateToTarget(activeMessaging.value.totalMessages)
-})
 
 const baseHeatmapData = computed(() => {
   if (activeMessaging.value.heatmapData && activeMessaging.value.heatmapData.length > 0) {
@@ -151,6 +119,100 @@ const subtitle = computed(() => {
   if (person.value === 'elizabeth') return "Elizabeth's messaging heatmap"
   return 'Our messaging heatmap'
 })
+
+// ── Daily Calendar Heatmap ──
+const activeCalendar = computed(() => {
+  const source = perspective.value === 'hers' ? dailyCalendarDataMsk : dailyCalendarData
+  return source[person.value]
+})
+
+const CALENDAR_MONTH_NAMES = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+const CAL_DAY_LABELS = ['Mon', '', 'Wed', '', 'Fri', '', 'Sun']
+
+const calendarGrid = computed(() => {
+  const data = activeCalendar.value
+  const start = new Date('2025-11-19')
+  const end = new Date('2026-02-13')
+
+  // Build array of all dates
+  const allDates = []
+  for (let d = new Date(start); d <= end; d.setDate(d.getDate() + 1)) {
+    allDates.push(new Date(d))
+  }
+
+  // Monday-start: JS getDay() 0=Sun, we want Mon=0..Sun=6
+  const mondayIndex = (d) => (d.getDay() + 6) % 7
+
+  // Pad leading empty cells so first date lands on correct row
+  const firstDayOffset = mondayIndex(allDates[0])
+  const cells = []
+  for (let i = 0; i < firstDayOffset; i++) cells.push(null)
+  for (const d of allDates) {
+    const iso = d.toISOString().slice(0, 10)
+    cells.push({ date: d, iso, count: data[iso] || 0 })
+  }
+
+  // Build weeks (columns of 7)
+  const weeks = []
+  for (let i = 0; i < cells.length; i += 7) {
+    weeks.push(cells.slice(i, i + 7))
+  }
+  // Pad last week to 7
+  const last = weeks[weeks.length - 1]
+  while (last.length < 7) last.push(null)
+
+  // Month labels: find first week index where a new month starts
+  const monthLabels = []
+  let lastMonth = -1
+  for (let wi = 0; wi < weeks.length; wi++) {
+    for (const cell of weeks[wi]) {
+      if (cell && cell.date) {
+        const m = cell.date.getMonth()
+        if (m !== lastMonth) {
+          monthLabels.push({ weekIndex: wi, label: CALENDAR_MONTH_NAMES[m] })
+          lastMonth = m
+          break
+        }
+      }
+    }
+  }
+
+  return { weeks, monthLabels }
+})
+
+const calendarMax = computed(() => {
+  const data = activeCalendar.value
+  let max = 1
+  for (const v of Object.values(data)) {
+    if (v > max) max = v
+  }
+  return max
+})
+
+const getCalendarColor = (count) => {
+  if (count === 0) return 'rgba(255, 255, 255, 0.03)'
+  const t = Math.pow(count / calendarMax.value, 0.45)
+  const alpha = 0.08 + t * 0.92
+  return `rgba(255, 255, 255, ${alpha})`
+}
+
+const calTooltip = ref({ show: false, x: 0, y: 0, text: '' })
+
+const showCalTooltip = (event, cell) => {
+  if (!cell) return
+  const d = cell.date
+  const label = `${CALENDAR_MONTH_NAMES[d.getMonth()]} ${d.getDate()}, ${d.getFullYear()}`
+  calTooltip.value = {
+    show: true,
+    x: event.clientX,
+    y: event.clientY,
+    text: `${label} — ${cell.count} msgs`
+  }
+}
+
+const hideCalTooltip = () => {
+  calTooltip.value.show = false
+}
 </script>
 
 <template>
@@ -202,13 +264,13 @@ const subtitle = computed(() => {
     <!-- Big number display -->
     <div class="text-center mb-12">
       <div class="text-6xl md:text-8xl font-bold mb-2">
-        {{ animatedValue.toLocaleString() }}+
+        {{ activeMessaging.totalMessages.toLocaleString() }}+
       </div>
       <p class="text-xl text-white/80">messages and counting</p>
     </div>
 
     <!-- Heatmap -->
-    <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-4 md:p-6 overflow-x-auto">
+    <div class="bg-white/10 rounded-2xl p-4 md:p-6 overflow-x-auto">
       <!-- Timezone toggle -->
       <div class="flex justify-center mb-4">
         <div class="bg-white/10 rounded-full p-1 flex gap-1">
@@ -258,7 +320,7 @@ const subtitle = computed(() => {
               <div
                 v-for="hour in hours"
                 :key="'cell-' + dayIndex + '-' + hour"
-                class="flex-1 aspect-square rounded-sm transition-all duration-300 hover:scale-150 hover:z-10"
+                class="flex-1 aspect-square rounded-sm"
                 :style="{
                   backgroundColor: getHeatmapColor(
                     heatmapData.find(d => d.day === dayIndex && d.hour === hour)?.count || 0
@@ -271,9 +333,99 @@ const subtitle = computed(() => {
           </div>
         </div>
       </div>
+
     </div>
 
-    <!-- Tooltip -->
+    <!-- Daily Calendar Heatmap -->
+    <div class="bg-white/10 rounded-2xl p-4 md:p-6 mt-6 overflow-x-auto">
+      <!-- Timezone toggle -->
+      <div class="flex justify-center mb-4">
+        <div class="bg-white/10 rounded-full p-1 flex gap-1">
+          <button
+            @click="perspective = 'his'"
+            class="px-4 py-1.5 rounded-full text-sm font-medium transition-all duration-300"
+            :class="{
+              'bg-white text-rose-600': perspective === 'his',
+              'text-white/70 hover:text-white': perspective !== 'his'
+            }"
+          >
+            His time (AEDT)
+          </button>
+          <button
+            @click="perspective = 'hers'"
+            class="px-4 py-1.5 rounded-full text-sm font-medium transition-all duration-300"
+            :class="{
+              'bg-white text-rose-600': perspective === 'hers',
+              'text-white/70 hover:text-white': perspective !== 'hers'
+            }"
+          >
+            Her time (MSK)
+          </button>
+        </div>
+      </div>
+
+      <div class="min-w-[320px]">
+        <!-- Month labels -->
+        <div class="flex items-center mb-1">
+          <div class="w-10 shrink-0 mr-1"></div>
+          <div class="flex-1 relative h-4">
+            <template v-for="(ml, idx) in calendarGrid.monthLabels" :key="'ml-' + idx">
+              <span
+                class="text-xs text-white/40 absolute"
+                :style="{ left: (ml.weekIndex / calendarGrid.weeks.length * 100) + '%' }"
+              >{{ ml.label }}</span>
+            </template>
+          </div>
+        </div>
+
+        <!-- Grid: 7 rows (Mon-Sun), N week columns using CSS grid -->
+        <div
+          class="grid"
+          :style="{
+            gridTemplateColumns: `auto repeat(${calendarGrid.weeks.length}, 1fr)`,
+            gridTemplateRows: 'repeat(7, 1fr)',
+            gap: '3px'
+          }"
+        >
+          <template v-for="row in 7" :key="'row-' + row">
+            <!-- Day label -->
+            <div class="flex items-center justify-end pr-1">
+              <span class="text-[10px] text-white/50">{{ CAL_DAY_LABELS[row - 1] }}</span>
+            </div>
+            <!-- Cells for this row across all weeks -->
+            <div
+              v-for="(week, wi) in calendarGrid.weeks"
+              :key="'cc-' + wi + '-' + (row - 1)"
+              class="aspect-square rounded-sm"
+              :class="week[row - 1] ? 'cursor-pointer' : ''"
+              :style="{
+                backgroundColor: week[row - 1] ? getCalendarColor(week[row - 1].count) : 'transparent'
+              }"
+              @mouseenter="week[row - 1] && showCalTooltip($event, week[row - 1])"
+              @mouseleave="hideCalTooltip"
+            ></div>
+          </template>
+        </div>
+
+        <!-- Legend -->
+        <div class="flex justify-end items-center gap-1 mt-3">
+          <span class="text-[10px] text-white/40">Less</span>
+          <div
+            v-for="level in [0, 0.2, 0.4, 0.7, 1.0]"
+            :key="'leg-' + level"
+            class="w-[10px] h-[10px] rounded-sm"
+            :style="{
+              backgroundColor: level === 0
+                ? 'rgba(255,255,255,0.03)'
+                : `rgba(255,255,255,${0.08 + Math.pow(level, 0.45) * 0.92})`
+            }"
+          ></div>
+          <span class="text-[10px] text-white/40">More</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tooltips -->
     <Teleport to="body">
       <div
         v-if="tooltip.show"
@@ -281,6 +433,13 @@ const subtitle = computed(() => {
         :style="{ left: tooltip.x + 12 + 'px', top: tooltip.y - 36 + 'px' }"
       >
         {{ tooltip.text }}
+      </div>
+      <div
+        v-if="calTooltip.show"
+        class="fixed z-50 px-3 py-1.5 bg-gray-900 text-white text-sm rounded-lg shadow-lg pointer-events-none whitespace-nowrap"
+        :style="{ left: calTooltip.x + 12 + 'px', top: calTooltip.y - 36 + 'px' }"
+      >
+        {{ calTooltip.text }}
       </div>
     </Teleport>
 
@@ -294,3 +453,4 @@ const subtitle = computed(() => {
     </div>
   </div>
 </template>
+
