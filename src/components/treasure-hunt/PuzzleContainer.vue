@@ -10,6 +10,7 @@ import Puzzle5 from './Puzzle5.vue'
 import Puzzle6 from './Puzzle6.vue'
 import Puzzle7 from './Puzzle7.vue'
 import Puzzle8 from './Puzzle8.vue'
+import Puzzle9 from './Puzzle9.vue'
 
 const store = useGameStore()
 
@@ -18,10 +19,11 @@ const puzzleComponents = {
   1: Puzzle3,
   2: Puzzle4,
   3: Puzzle5,
-  4: Puzzle8,
-  5: Puzzle7,
-  6: Puzzle2,
-  7: Puzzle6
+  4: Puzzle9,
+  5: Puzzle8,
+  6: Puzzle7,
+  7: Puzzle2,
+  8: Puzzle6
 }
 
 const currentPuzzleComponent = computed(() => {
@@ -77,7 +79,7 @@ const getPuzzleStatus = (index) => {
       <div :key="store.state.currentPuzzle" class="puzzle-card">
         <div class="text-center mb-6">
           <span class="text-sm text-rose-400 uppercase tracking-wider">
-            Puzzle {{ store.state.currentPuzzle + 1 }} of 8
+            Puzzle {{ store.state.currentPuzzle + 1 }} of 9
           </span>
           <h2 class="text-3xl font-bold gradient-text mt-1">
             {{ currentPuzzleData.title }}

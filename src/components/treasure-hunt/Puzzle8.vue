@@ -51,7 +51,7 @@ const reset = () => {
 
 const submit = async () => {
   const answer = slots.value.map(s => s?.letter ?? '').join('')
-  if (await checkAnswer(4, answer)) {
+  if (await checkAnswer(5, answer)) {
     emit('solved')
   } else {
     error.value = true

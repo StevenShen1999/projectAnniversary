@@ -40,7 +40,7 @@ watch(() => store.allPuzzlesCompleted.value, (completed) => {
 })
 
 const progressPercent = computed(() => {
-  return (store.completedCount.value / 8) * 100
+  return (store.completedCount.value / 9) * 100
 })
 </script>
 
@@ -85,7 +85,7 @@ const progressPercent = computed(() => {
         <div class="max-w-md mx-auto mt-6">
           <div class="flex justify-between text-sm text-rose-600 mb-2">
             <span>Progress</span>
-            <span>{{ store.completedCount.value }} / 8</span>
+            <span>{{ store.completedCount.value }} / 9</span>
           </div>
           <div class="h-3 bg-white/50 rounded-full overflow-hidden shadow-inner">
             <div
