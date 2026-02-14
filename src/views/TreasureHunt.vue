@@ -78,7 +78,7 @@ const progressPercent = computed(() => {
           A Treasure Hunt for Elizabeth
         </h1>
         <p class="text-rose-600/80 text-lg">
-          Solve all 8 puzzles to unlock your surprise
+          Solve all 9 puzzles to unlock your surprise
         </p>
 
         <!-- Progress bar -->

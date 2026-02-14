@@ -44,6 +44,8 @@ const selectPuzzle = (index) => {
   }
 }
 
+const secretCode = 'IADOREYOU'
+
 const getPuzzleStatus = (index) => {
   if (store.state.puzzlesCompleted[index]) return 'completed'
   if (store.canAccessPuzzle(index)) return 'available'
@@ -68,7 +70,7 @@ const getPuzzleStatus = (index) => {
           'bg-gray-200 text-gray-400 cursor-not-allowed': getPuzzleStatus(index) === 'locked'
         }"
       >
-        <span v-if="getPuzzleStatus(index) === 'completed'">✓</span>
+        <span v-if="getPuzzleStatus(index) === 'completed'">{{ secretCode[index] }}</span>
         <span v-else-if="getPuzzleStatus(index) === 'locked'">🔒</span>
         <span v-else>{{ index + 1 }}</span>
       </button>
