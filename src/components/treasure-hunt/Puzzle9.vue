@@ -30,6 +30,45 @@ const rotateDial = (index, direction) => {
   }
 }
 
+// Drag handling
+const dragState = { index: -1, startY: 0, accumulated: 0 }
+const DRAG_THRESHOLD = 30
+
+const onDragStart = (index, e) => {
+  e.preventDefault()
+  const y = e.type === 'touchstart' ? e.touches[0].clientY : e.clientY
+  dragState.index = index
+  dragState.startY = y
+  dragState.accumulated = 0
+
+  const onMove = (ev) => {
+    const cy = ev.type === 'touchmove' ? ev.touches[0].clientY : ev.clientY
+    const delta = cy - dragState.startY
+    const steps = Math.trunc(delta / DRAG_THRESHOLD)
+    if (steps !== dragState.accumulated) {
+      const diff = steps - dragState.accumulated
+      dragState.accumulated = steps
+      // Dragging down = positive delta = scroll down (next letter)
+      for (let i = 0; i < Math.abs(diff); i++) {
+        rotateDial(dragState.index, diff > 0 ? 'down' : 'up')
+      }
+    }
+  }
+
+  const onEnd = () => {
+    document.removeEventListener('mousemove', onMove)
+    document.removeEventListener('mouseup', onEnd)
+    document.removeEventListener('touchmove', onMove)
+    document.removeEventListener('touchend', onEnd)
+    dragState.index = -1
+  }
+
+  document.addEventListener('mousemove', onMove)
+  document.addEventListener('mouseup', onEnd)
+  document.addEventListener('touchmove', onMove, { passive: false })
+  document.addEventListener('touchend', onEnd)
+}
+
 const getLetterAt = (dialIndex, offset) => {
   const pos = (dials.value[dialIndex] + offset + 26) % 26
   return ALPHABET[pos]
@@ -78,7 +117,11 @@ const submit = async () => {
             </button>
 
             <!-- Dial display -->
-            <div class="dial-window">
+            <div
+              class="dial-window"
+              @mousedown="onDragStart(index, $event)"
+              @touchstart="onDragStart(index, $event)"
+            >
               <span class="dial-letter-adjacent">{{ getLetterAt(index, -1) }}</span>
               <span class="dial-letter-current">
                 {{ getLetterAt(index, 0) }}
@@ -188,6 +231,11 @@ const submit = async () => {
   position: relative;
   overflow: hidden;
   user-select: none;
+  cursor: grab;
+  touch-action: none;
+}
+.dial-window:active {
+  cursor: grabbing;
 }
 
 .dial-window::before,

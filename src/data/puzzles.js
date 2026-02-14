@@ -37,7 +37,7 @@ export const puzzles = [
   },
   {
     id: 4,
-    title: "Not From Russia With Love",
+    title: "(Not) From Russia With Love",
     question:
       "Many may confuse her as a Russian, but she is in fact from Belarus, a city (although she was originally from a village) called",
     type: "text-input",
