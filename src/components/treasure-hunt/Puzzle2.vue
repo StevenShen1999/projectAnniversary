@@ -30,7 +30,7 @@ const onInput = (part, event) => {
 }
 
 const submit = async () => {
-  if (await checkAnswer(7, fullAnswer.value)) {
+  if (await checkAnswer(6, fullAnswer.value)) {
     emit('solved')
   } else {
     error.value = true

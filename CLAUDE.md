@@ -34,11 +34,11 @@ The display order differs from component numbering. `PuzzleContainer.vue` maps p
 | 2 | Puzzle3 | text-input | What's In a Name? | Nickname she calls me → Himbo |
 | 3 | Puzzle4 | word-scramble | Bonding Moments | Favourite past time → ageofmythology |
 | 4 | Puzzle5 | text-input | Not From Russia With Love | City in Belarus → Baranovichi (accepts English/Cyrillic, Russian/Belarusian spellings) |
-| 5 | Puzzle9 | cryptex | A City Asleep | What she rides at dawn in summer → motorbike (rotating letter dials) |
-| 6 | Puzzle8 | concert-ticket | For Her Eyes (And Ears) Only | Band she saw live → Звери (Cyrillic letter picker) |
-| 7 | Puzzle7 | emoji-select | Non-Negotiable | Daily routine → Workout |
-| 8 | Puzzle2 | three-part-input | Classified Intel | `__-__-__` format → 85-65-90 |
-| 9 | Puzzle6 | multi-select | The Full Package | Virtues → all four: Empathy, Intelligence, Mental Fortitude, Loving |
+| 5 | Puzzle8 | concert-ticket | For Her Eyes (And Ears) Only | Band she saw live → Звери (Cyrillic letter picker) |
+| 6 | Puzzle7 | emoji-select | Non-Negotiable | Daily routine → Workout |
+| 7 | Puzzle2 | three-part-input | Classified Intel | `__-__-__` format → 85-65-90 |
+| 8 | Puzzle6 | multi-select | The Full Package | Virtues → all four: Empathy, Intelligence, Mental Fortitude, Loving |
+| 9 | Puzzle9 | cryptex | A City Asleep | What she rides at dawn in summer → motorbike (rotating letter dials) |
 
 Answers are stored as SHA-256 hashes in `src/data/puzzles.js`. The `checkAnswer()` function hashes user input and compares.
 

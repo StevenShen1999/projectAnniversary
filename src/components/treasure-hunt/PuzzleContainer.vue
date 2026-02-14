@@ -19,11 +19,11 @@ const puzzleComponents = {
   1: Puzzle3,
   2: Puzzle4,
   3: Puzzle5,
-  4: Puzzle9,
-  5: Puzzle8,
-  6: Puzzle7,
-  7: Puzzle2,
-  8: Puzzle6
+  4: Puzzle8,
+  5: Puzzle7,
+  6: Puzzle2,
+  7: Puzzle6,
+  8: Puzzle9
 }
 
 const currentPuzzleComponent = computed(() => {

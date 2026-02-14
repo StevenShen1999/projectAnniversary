@@ -49,15 +49,6 @@ export const puzzles = [
     ],
   },
   {
-    id: 9,
-    title: "A City Asleep",
-    question:
-      "Empty roads, cool fresh air, and a beautiful Sun. What does she like to do in summer mornings?",
-    type: "cryptex",
-    answerHash:
-      "aa1b69a8c485ba42782c313a55397cf4ef5c3d54403a6c58b37a2997afb33ce0",
-  },
-  {
     id: 5,
     title: "For Her Eyes (And Ears) Only",
     question:
@@ -99,6 +90,15 @@ export const puzzles = [
     options: ["Empathy", "Intelligence", "Mental Fortitude", "Loving"],
     answerHash:
       "2ceb3a60b0b4cdabf815f6720d5860f71748ad63e4eb47cec1b3ab18a933bdd8",
+  },
+  {
+    id: 9,
+    title: "A City Asleep",
+    question:
+      "Empty roads, cool fresh air, and a beautiful Sun. What does she like to do in summer mornings?",
+    type: "cryptex",
+    answerHash:
+      "aa1b69a8c485ba42782c313a55397cf4ef5c3d54403a6c58b37a2997afb33ce0",
   },
 ];
 

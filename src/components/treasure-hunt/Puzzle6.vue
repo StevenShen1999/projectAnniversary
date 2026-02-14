@@ -20,7 +20,7 @@ const toggleOption = (option) => {
 const isSelected = (option) => selected.value.includes(option)
 
 const submit = async () => {
-  if (await checkAnswer(8, selected.value)) {
+  if (await checkAnswer(7, selected.value)) {
     emit('solved')
   } else {
     error.value = true

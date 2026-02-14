@@ -37,7 +37,7 @@ const getLetterAt = (dialIndex, offset) => {
 
 const submit = async () => {
   const combined = dials.value.map(i => ALPHABET[i]).join('')
-  if (await checkAnswer(4, combined)) {
+  if (await checkAnswer(8, combined)) {
     emit('solved')
   } else {
     error.value = true
