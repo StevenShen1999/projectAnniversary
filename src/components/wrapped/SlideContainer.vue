@@ -23,9 +23,6 @@ const slides = [
 
 const currentSlide = ref(0)
 const direction = ref('forward')
-const touchStartX = ref(0)
-const touchEndX = ref(0)
-
 const currentComponent = computed(() => slides[currentSlide.value].component)
 
 const canGoNext = computed(() => currentSlide.value < slides.length - 1)
@@ -55,24 +52,6 @@ const goToSlide = (index) => {
   }
 }
 
-// Touch handling for swipe
-const handleTouchStart = (e) => {
-  touchStartX.value = e.touches[0].clientX
-}
-
-const handleTouchEnd = (e) => {
-  touchEndX.value = e.changedTouches[0].clientX
-  const diff = touchStartX.value - touchEndX.value
-
-  if (Math.abs(diff) > 50) {
-    if (diff > 0) {
-      nextSlide()
-    } else {
-      prevSlide()
-    }
-  }
-}
-
 // Keyboard navigation
 const handleKeydown = (e) => {
   if (e.key === 'ArrowRight' || e.key === ' ') {
@@ -95,8 +74,6 @@ onUnmounted(() => {
 <template>
   <div
     class="min-h-screen flex flex-col"
-    @touchstart="handleTouchStart"
-    @touchend="handleTouchEnd"
   >
     <!-- Progress dots -->
     <div class="fixed top-6 left-1/2 transform -translate-x-1/2 z-50 flex gap-2">
@@ -151,7 +128,7 @@ onUnmounted(() => {
         v-if="currentSlide === 0"
         class="fixed bottom-24 left-1/2 transform -translate-x-1/2 text-white/60 text-sm animate-pulse"
       >
-        Swipe or use arrow keys to navigate
+        Use arrow keys or buttons to navigate
       </div>
     </transition>
   </div>
