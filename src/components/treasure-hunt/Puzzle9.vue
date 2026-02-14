@@ -48,9 +48,8 @@ const onDragStart = (index, e) => {
     if (steps !== dragState.accumulated) {
       const diff = steps - dragState.accumulated
       dragState.accumulated = steps
-      // Dragging down = positive delta = scroll down (next letter)
       for (let i = 0; i < Math.abs(diff); i++) {
-        rotateDial(dragState.index, diff > 0 ? 'down' : 'up')
+        rotateDial(dragState.index, diff > 0 ? 'up' : 'down')
       }
     }
   }
